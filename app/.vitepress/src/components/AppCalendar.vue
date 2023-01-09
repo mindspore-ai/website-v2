@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, nextTick, onMounted, reactive, onBeforeUnmount } from 'vue';
+import { ref, nextTick, onMounted, reactive } from 'vue';
 
 import OIcon from '@/components/OIcon.vue';
 
@@ -59,10 +59,7 @@ const activityType = ['线下', '线上', '线上 + 线下'];
 const titleList = ['全部', '会议', '课程', 'MSG', '赛事', '其他'];
 
 const activeBoxs = ref(null);
-
-// const activeBoxs = (el:HTMLElement) => {
-//   activeBoxsArr.value.push(el)
-// };
+const calendarHeight = ref<number | string>(335);
 
 // 活动会议筛选
 function changeTab(index: number) {
@@ -100,7 +97,9 @@ function meetClick(day: string) {
         if (item.timeData.length === 1) {
           activeName.value = '0';
           nextTick(() => {
-            (document.querySelector('.meet-item') as HTMLElement).click();
+            if (document.querySelector('.meet-item')) {
+              (document.querySelector('.meet-item') as HTMLElement).click();
+            }
           });
         } else {
           // 会议时间排序
@@ -140,7 +139,7 @@ function changeMonth(index: number) {
   ).click();
 }
 
-function watchChange(element: Element) {
+function watchChange(element: HTMLElement) {
   let observe = new MutationObserver(function () {
     monthDate.value = element.innerHTML;
   });
@@ -155,11 +154,31 @@ function changeCollapse() {
   isCollapse.value = !isCollapse.value;
 }
 
+function bodyChange(element: HTMLElement) {
+  const observe = new MutationObserver(function () {
+    calendarHeight.value = `${element.offsetHeight - 1}px`;
+  });
+  observe.observe(element, {
+    childList: true,
+    subtree: true,
+    characterData: true,
+  });
+}
+
 onMounted(() => {
   // 获取日历数据
   try {
     Promise.all([getActivityData(), getMeetingData()]).then((res) => {
       tableData = [...res[0].tableData, ...res[1].tableData];
+      tableData.reduce((prev: any, current: any) => {
+        const item: any = prev.find(
+          (sameDate: any) => sameDate.start_date === current.date
+        );
+        item
+          ? (item.timeData = item.timeData.concat(current.timeData))
+          : prev.push(current);
+        return prev;
+      }, []);
       (document.querySelector('.is-today .day-box') as HTMLElement).click();
       nextTick(() => {
         let activeBoxs = document.querySelectorAll('.be-active')[
@@ -177,9 +196,11 @@ onMounted(() => {
   const element = document.querySelector('.el-calendar__title') as HTMLElement;
   monthDate.value = element.innerHTML;
   watchChange(element);
-});
-onBeforeUnmount(() => {
-  // (document.querySelector('.el-button-group') as HTMLElement).removeEventListener('click', function () {});
+  const tbody = document.querySelector('.main-body tbody') as HTMLElement;
+  if (tbody) {
+    bodyChange(tbody);
+    calendarHeight.value = `${tbody.offsetHeight - 1}px`;
+  }
 });
 </script>
 <template>
@@ -226,13 +247,13 @@ onBeforeUnmount(() => {
           </div>
         </template>
       </el-calendar>
-      <div class="detailList">
+      <div class="detail-list">
         <div class="detailHead">
           最新日程：
           <span>{{ currentDay }}</span>
         </div>
-        <div class="meetList">
-          <div v-if="isMeeting" class="demo-collapse">
+        <div class="meet-list">
+          <div v-if="renderData?.timeData?.length" class="demo-collapse">
             <el-collapse
               v-model="activeName"
               accordion
@@ -480,14 +501,13 @@ a {
         }
       }
     }
-    :deep(.detailList) {
+    :deep(.detail-list) {
       width: 100%;
       .detailHead {
         padding: 12px 0 13px;
         text-align: center;
         color: #555555;
         background-color: $backgroundColor;
-        font-family: FZLTZHJW--GB1-0, FZLTZHJW--GB1;
       }
       .el-collapse {
         border: none;
@@ -510,9 +530,9 @@ a {
           background-color: #eef0f4;
         }
       }
-      .meetList {
+      .meet-list {
         padding: 8px 0 0 8px;
-        height: calc(100% - 44px);
+        height: v-bind('calendarHeight');
         background-color: #fff;
         border-right: 1px solid #e5e8f0;
         border-bottom: 1px solid #e5e8f0;

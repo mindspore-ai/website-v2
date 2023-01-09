@@ -8,7 +8,7 @@ import OIcon from '@/components/OIcon.vue';
 import IconRight from '~icons/appbak/arrow-right.svg';
 import IconTime from '~icons/appbak/time.svg';
 import IconLink from '~icons/appbak/link.svg';
-import MapMarker from '/img/calendar/position.svg';
+import MapMarker from '@/assets/category/calendar/position.svg';
 
 
 import { getBetweenDateStr } from '@/shared/utils';
