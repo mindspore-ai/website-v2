@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import AppContent from '@/components/AppContent.vue';
+import InternshipConfig from '@/data/internship';
 
 import InternshipBanner from './InternshipBanner.vue';
 import InternshipStep from './InternshipStep.vue';
@@ -7,124 +9,11 @@ import InternshipTask from './InternshipTask.vue';
 import InternshipRank from './InternshipRank.vue';
 import OTitleNav from '@/components/OTitleNav.vue';
 
-import StepTitle from '/img/internship/step-title.png';
-import TaskTitle from '/img/internship/task-title.png';
-import IntegralTitle from '/img/internship/integral-title.png';
-import PartnerTitle from '/img/internship/partner-title.png';
-import HelpTitle from '/img/internship/help-title.png';
-
-const INTEGRAL_DATA = [
-  {
-    HEAD: '1、实习工资、',
-    TEXT: [
-      '实习有效期6个月内满20分以上，可获得不同级别的实习工资。具体见以上“申请步骤4”里的工资说明。',
-    ],
-    SUPPLEMENT: '',
-  },
-  {
-    HEAD: '2、实习证明',
-    TEXT: [
-      '实习有效期6个月内积分满60分',
-      '至少找一位导师写实习评语',
-      '提交实习报告',
-    ],
-    SUPPLEMENT: '满足以上3条，实习评语与实习报告经评审合格后发放实习证明。',
-  },
-  {
-    HEAD: '3、优秀实习生证书',
-    TEXT: [
-      '实习有效期6个月内积分满100分。（需包含有20及以上分值的任务）',
-      '至少找一位导师写优秀推荐评语。',
-      '完成优秀实习生线上公开答辩（直播形式）。',
-    ],
-    SUPPLEMENT:
-      '满足以上3条，公开答辩获得评委打分80分以上后，发放优秀实习生证书。',
-  },
-  {
-    HEAD: '4、昇思MindSpore资深开发者认证',
-    TEXT: [
-      '2022年内独在昇思MindSpore社区积分满50分，并在MindSpore公众号发布1篇以上实习项目相关文章，参与一次实习直播主讲。',
-      '可获得昇思MindSpore资深开发者认证，在昇思MindSpore官网展示、专属礼品（价值1500元），以及官方大会门票、线下meetup等。',
-    ],
-  },
-];
-const RULE = {
-  RULE_DATA: [
-    {
-      QUESTION: '1、哪些人可以报名？',
-      ANSWER:
-        'A：开源实习面向全国范围内年满18周岁的全日制/非全日制在校学生招募，无专业年级限制，欢迎感兴趣的同学踊跃报名。',
-    },
-    {
-      QUESTION: '2、实习有效期6个月是如何计算的？',
-      ANSWER:
-        'A：在申请实习时需签署实习劳务合同，实习有效期即劳务合同上填写的实习有效期，为6个月期限，6个月期限内未满60积分则不能获得实习证明。线上实习时间管理相对自由，可根据自身情况安排时间，可提前结束实习。',
-    },
-    {
-      QUESTION: '3、超过了6个月或者完成了100积分还能继续在社区做任务吗？',
-      ANSWER:
-        'A：可以，但积分不能再用于领取证明和奖金，一年内累计到150积分可获得昇思MindSpore资深开发者荣誉。 ',
-    },
-  ],
-  MORE: ['更多问题，请移步', '本帖', '评论区提问。'],
-};
-const PARTNER_DATA = [
-  {
-    IMG: '/img/internship/iscas.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/qilinsoft.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/tongxin.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/kylinsec.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/gitee.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/mindSpore.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/openEuler.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/openGauss.png',
-    LINK: '',
-  },
-  {
-    IMG: '/img/internship/openLooKeng.png',
-    LINK: '',
-  },
-];
-
-const HELP = {
-  INFO: [
-    '联系邮箱:',
-    'intern@openeuler.sh',
-    '扫码加入导师答疑群，更多关于昇思MindSpore实习任务答疑群内咨询。群号：771293469',
-    '扫码加入“开源实习”学生QQ群，更多问题群内咨询。群号：458603235',
-  ],
-  ITEM: [
-    {
-      IMG: '/img/internship/qrCode.png',
-      TEXT: '昇思MindSpore导师答疑群',
-    },
-    {
-      IMG: '/img/internship/qrCode1.png',
-      TEXT: '开源实习群',
-    },
-  ],
-};
+import StepTitle from '/category/internship/step-title.png';
+import TaskTitle from '/category/internship/task-title.png';
+import IntegralTitle from '/category/internship/integral-title.png';
+import PartnerTitle from '/category/internship/partner-title.png';
+import HelpTitle from '/category/internship/help-title.png';
 
 // 右侧导航
 const isShowNav = ref(false);
@@ -207,7 +96,7 @@ onUnmounted(() => {
     :internship="true"
   ></OTitleNav>
   <InternshipBanner />
-  <main class="wrapper">
+  <AppContent :mobile-top="16">
     <section id="introduce" class="panel introduce-card">
       <p class="text">
         昇思MindSpore开源实习是MindSpore社区携手openEuler社区等多个社区共同发起的线上实习项目，旨在鼓励在校学生积极参与开源社区，在实际的开源环境中提升实践能力。由昇思MindSpore社区提供实习任务，并提供导师辅导，学生通过实习申请后，可在社区领取任务，每完成一个任务可获得相应积分，积分累计达规定量后，可获得实习证明和实习工资。
@@ -234,13 +123,17 @@ onUnmounted(() => {
         <div class="integral-content">
           <div
             class="integral-item"
-            v-for="(item, index) in INTEGRAL_DATA"
+            v-for="(item, index) in InternshipConfig.INTEGRAL_DATA"
             :class="{ circular: index !== 3 }"
             :key="item.HEAD"
           >
             <h3>{{ item.HEAD }}</h3>
             <div v-for="(item1, index1) in item.TEXT" :key="item1" class="star">
-              <img v-if="index === 3" src="/img/internship/star.png" alt="" />
+              <img
+                v-if="index === 3"
+                src="/category/internship/star.png"
+                alt=""
+              />
               <p>
                 <slot v-if="index === 1 && index1 === 2">
                   <a href="/doc/实习报告模板.docx" title="下载报告模板">{{
@@ -257,42 +150,46 @@ onUnmounted(() => {
     </section>
     <section id="rank" class="panel">
       <div class="rank-title">
-        <img class="web" src="/img/internship/rank-title.png" alt="" />
-        <img class="mobile" src="/img/internship/rank-title-mo.png" alt="" />
+        <img class="web" src="/category/internship/rank-title.png" alt="" />
+        <img
+          class="mobile"
+          src="/category/internship/rank-title-mo.png"
+          alt=""
+        />
       </div>
       <InternshipRank />
     </section>
-  </main>
-  <section id="rule" class="panel">
-    <div class="rule-title title">
-      <img src="/img/internship/rule-title.png" alt="" />
-    </div>
-    <div class="rule-border">
-      <div class="rule-content">
-        <div class="wrapper">
-          <div
-            class="rule-item"
-            v-for="(item, index) in RULE.RULE_DATA"
-            :key="index"
-          >
-            <div class="question">{{ item.QUESTION }}</div>
-            <div class="answer">{{ item.ANSWER }}</div>
-          </div>
-          <div class="more-question orange">
-            {{ RULE.MORE[0] }}
-            <a
-              class="this-post"
-              href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
-              target="_blank"
-              >{{ RULE.MORE[1] }}</a
+
+    <section id="rule" class="panel">
+      <div class="rule-title title">
+        <img src="/category/internship/rule-title.png" alt="" />
+      </div>
+      <div class="rule-border">
+        <div class="rule-content">
+          <div class="wrapper">
+            <div
+              class="rule-item"
+              v-for="(item, index) in InternshipConfig.RULE_DATA"
+              :key="index"
             >
-            {{ RULE.MORE[2] }}
+              <div class="question">{{ item.QUESTION }}</div>
+              <div class="answer">{{ item.ANSWER }}</div>
+            </div>
+            <div class="more-question orange">
+              {{ InternshipConfig.RULE_MORE[0] }}
+              <a
+                class="this-post"
+                href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
+                target="_blank"
+                >{{ InternshipConfig.RULE_MORE[1] }}</a
+              >
+              {{ InternshipConfig.RULE_MORE[2] }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <main class="wrapper">
+    </section>
+
     <section id="partner" class="panel">
       <div class="warper">
         <div class="partner-title title">
@@ -301,7 +198,7 @@ onUnmounted(() => {
         <div class="img-list">
           <div
             class="img-cover"
-            v-for="(item, index) in PARTNER_DATA"
+            v-for="(item, index) in InternshipConfig.PARTNER_DATA"
             :key="index"
           >
             <img alt="" :src="item.IMG" />
@@ -309,7 +206,7 @@ onUnmounted(() => {
         </div>
       </div>
     </section>
-  </main>
+  </AppContent>
   <div class="help-title title" id="help">
     <img :src="HelpTitle" alt="" />
   </div>
@@ -318,14 +215,16 @@ onUnmounted(() => {
       <div class="wrapper help-content">
         <div class="help-left">
           <p>
-            {{ HELP.INFO[0] }}
-            <a href="mailto:intern@openeuler.sh">{{ HELP.INFO[1] }}</a>
+            {{ InternshipConfig.HELP.INFO[0] }}
+            <a href="mailto:intern@openeuler.sh">{{
+              InternshipConfig.HELP.INFO[1]
+            }}</a>
           </p>
-          <p>{{ HELP.INFO[2] }}</p>
-          <p>{{ HELP.INFO[3] }}</p>
+          <p>{{ InternshipConfig.HELP.INFO[2] }}</p>
+          <p>{{ InternshipConfig.HELP.INFO[3] }}</p>
         </div>
         <div class="help-right">
-          <p v-for="(item, index) in HELP.ITEM" :key="index">
+          <p v-for="(item, index) in InternshipConfig.HELP.ITEM" :key="index">
             <img :src="item.IMG" alt="" />
             <span>{{ item.TEXT }}</span>
           </p>
@@ -369,7 +268,7 @@ onUnmounted(() => {
   }
 }
 .introduce-card {
-  background: var(--theme-card-bg);
+  background: var(--o-color-bg2);
   padding: 40px;
   box-shadow: 0px 13px 30px 0px var(--theme-shadow);
   @media (max-width: 1000px) {
@@ -400,8 +299,8 @@ onUnmounted(() => {
       font-size: 14px;
       color: rgba(0, 0, 0, 0.5);
       border-radius: 8px;
-      background: #eef1ff url(/img/internship/integral-bg.png) no-repeat right
-        bottom;
+      background: #eef1ff url(/category/internship/integral-bg.png) no-repeat
+        right bottom;
       line-height: 24px;
       h3,
       h4 {
@@ -676,7 +575,7 @@ onUnmounted(() => {
       font-size: 14px;
       line-height: 22px;
       display: inline-block;
-      color: var(--theme-text);
+      color: var(--o-color-text4);
       margin-top: 8px;
     }
   }

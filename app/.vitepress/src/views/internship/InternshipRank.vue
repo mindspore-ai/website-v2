@@ -134,13 +134,13 @@ onMounted(() => {
           <a @click="extend()" v-if="!isExent">
             {{ RANK.VIEW_ALL }}
             <div>
-              <img src="/img/internship/right.svg" alt="" />
+              <img src="/category/internship/right.svg" alt="" />
             </div>
           </a>
           <a @click="extend()" v-else>
             {{ RANK.PACK_UP }}
             <div>
-              <img class="arrow" src="/img/internship/right.svg" alt="" />
+              <img class="arrow" src="/category/internship/right.svg" alt="" />
             </div>
           </a>
         </div>

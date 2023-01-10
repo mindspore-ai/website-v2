@@ -2,16 +2,11 @@
 import AppCalendar from '@/components/AppCalendar.vue';
 import AppBanner from '@/components/AppBanner.vue';
 
-import banner from '@/assets/category/calendar/banner-event-cover.png';
+import bannerIllustration from '@/assets/category/calendar/banner-event-cover.png';
 import processImg1 from '@/assets/category/calendar/img1.png';
 import processImg2 from '@/assets/category/calendar/img2.png';
 import processImg3 from '@/assets/category/calendar/img3.png';
 import processImg4 from '@/assets/category/calendar/img4.png';
-
-const bannerInfo = {
-  title: 'MindSpore社区活动',
-  cover: banner,
-};
 
 const appProcess = {
   title: '小程序预约流程',
@@ -37,7 +32,11 @@ const appProcess = {
 </script>
 <template>
   <div class="calendar">
-    <AppBanner :option="bannerInfo" />
+    <AppBanner
+      background-text=""
+      title="MindSpore社区活动"
+      :illustration="bannerIllustration"
+    />
     <h1 class="calendar-title">MindSpore社区活动日历</h1>
     <AppCalendar />
     <div class="app-process">
@@ -57,9 +56,9 @@ const appProcess = {
   .calendar-title {
     padding: 64px 0 40px;
     text-align: center;
+    font-weight: 300;
+    color: var(--o-color-text1);
     font-size: 36px;
-    font-weight: normal;
-    color: #000000;
     line-height: 48px;
   }
   .app-process {
@@ -69,7 +68,6 @@ const appProcess = {
     .process {
       display: flex;
       justify-content: space-between;
-
       li {
         text-align: center;
         position: relative;

@@ -2,23 +2,14 @@
 import { ref } from 'vue';
 import AppHeader from '@/components/AppHeader.vue';
 import AppFooter from '@/components/AppFooter.vue';
-
-import zhCn from 'element-plus/lib/locale/lang/zh-cn';
-import { ElConfigProvider } from 'element-plus';
-
-let locale = ref(zhCn);
 </script>
 
 <template>
-  <el-config-provider :locale="locale">
-    <header>
-      <AppHeader />
-    </header>
+  <AppHeader />
+  <main>
     <Content class="content" />
-    <footer>
-      <AppFooter />
-    </footer>
-  </el-config-provider>
+  </main>
+  <AppFooter />
 </template>
 
 <style lang="scss">
@@ -26,7 +17,15 @@ let locale = ref(zhCn);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.content {
-  min-height: calc(100vh - 80px);
+main {
+  position: relative;
+  min-height: calc(100vh - 452px);
+  background-color: var(--o-color-bg1);
+  padding-top: 80px;
+  overflow: hidden;
+
+  @media (max-width: 1100px) {
+    padding-top: 48px;
+  }
 }
 </style>

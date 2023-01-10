@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useRouter } from 'vitepress';
-import OButton from '@/components/OButton.vue';
 
 const router = useRouter();
 
@@ -12,7 +11,9 @@ const goPath = (path: string) => {
 <template>
   <main class="page404">
     <p class="text">404</p>
-    <o-button type="primary" @click="goPath('/home/')"> 回到首页 </o-button>
+    <OButton size="nomral" type="primary" @click="goPath('/home/')">
+      回到首页
+    </OButton>
   </main>
 </template>
 
@@ -28,7 +29,7 @@ const goPath = (path: string) => {
   }
   .text {
     font-size: 14px;
-    color: var(--theme-text);
+    color: var(--o-color-text4);
     margin: 12px 0 24px;
   }
 }

@@ -9,19 +9,19 @@ function stepChange(index: number) {
 const STEP = {
   STEPNAV: [
     {
-      IMG: '/img/internship/step_1.png',
+      IMG: '/category/internship/step_1.png',
       TEXT: '申请实习',
     },
     {
-      IMG: '/img/internship/step_2.png',
+      IMG: '/category/internship/step_2.png',
       TEXT: '领取任务',
     },
     {
-      IMG: '/img/internship/step_3.png',
+      IMG: '/category/internship/step_3.png',
       TEXT: '提交任务',
     },
     {
-      IMG: '/img/internship/step_4.png',
+      IMG: '/category/internship/step_4.png',
       TEXT: '工资与证书发放',
     },
   ],
@@ -125,7 +125,7 @@ const STEP = {
     </div>
     <div class="step-body">
       <div class="step-text" v-show="stepActive === 0">
-        <img class="number" src="/img/internship/step_1.png" alt="" />
+        <img class="number" src="/category/internship/step_1.png" alt="" />
         <h4>{{ STEP.STEP_ONE.TITLE }}</h4>
         <div class="main-text">
           <p>{{ STEP.STEP_ONE.TEXT1 }}</p>
@@ -156,7 +156,7 @@ const STEP = {
         </div>
       </div>
       <div class="step-text" v-show="stepActive === 1">
-        <img class="number" src="/img/internship/step_2.png" alt="" />
+        <img class="number" src="/category/internship/step_2.png" alt="" />
         <h4>{{ STEP.STEP_TOW.TITLE }}</h4>
         <div class="main-text">
           <p>{{ STEP.STEP_TOW.P_TEXT[0] }}</p>
@@ -196,7 +196,7 @@ const STEP = {
         </div>
       </div>
       <div class="step-text" v-show="stepActive === 2">
-        <img class="number" src="/img/internship/step_3.png" alt="" />
+        <img class="number" src="/category/internship/step_3.png" alt="" />
         <h4>{{ STEP.STEP_ThREE.TITLE }}</h4>
         <div class="main-text">
           <p>
@@ -225,13 +225,21 @@ const STEP = {
             </p>
           </div>
           <div class="flow-chart">
-            <img class="chart-pc" src="/img/internship/step-3.png" alt="" />
-            <img class="chart-mo" src="/img/internship/step-3-mo.png" alt="" />
+            <img
+              class="chart-pc"
+              src="/category/internship/step-3.png"
+              alt=""
+            />
+            <img
+              class="chart-mo"
+              src="/category/internship/step-3-mo.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
       <div class="step-text" v-show="stepActive === 3">
-        <img class="number" src="/img/internship/step_4.png" alt="" />
+        <img class="number" src="/category/internship/step_4.png" alt="" />
         <div class="main-text">
           <h4>{{ STEP.STEP_FOUR.TITLE }}</h4>
           <p>{{ STEP.STEP_FOUR.P_TEXT1[0] }}</p>
@@ -310,7 +318,7 @@ const STEP = {
         height: 180px;
         margin-top: -20px;
         padding-top: 26px;
-        background: url(/img/internship/step-active.png) no-repeat;
+        background: url(/category/internship/step-active.png) no-repeat;
         .tit {
           font-size: 30px;
           @media (max-width: 1400px) {
@@ -323,7 +331,7 @@ const STEP = {
       margin-top: -1px;
       padding: 32px 30px 37px;
       height: 410px;
-      background: url(/img/internship/step-background.png) no-repeat;
+      background: url(/category/internship/step-background.png) no-repeat;
       background-size: 100% 100%;
       .number {
         display: none;

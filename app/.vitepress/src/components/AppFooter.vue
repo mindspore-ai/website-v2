@@ -1,165 +1,145 @@
 <script lang="ts" setup>
-const footer = {
-  logo: '/img/foot-logo.png',
-  menu: [
-    {
-      title: '教程',
-      children: [
-        {
-          link: 'https://www.mindspore.cn/tutorials/zh-CN/master/index.html',
-          lable: '使用指导手册',
-        },
-        {
-          link: 'https://www.mindspore.cn/tutorials/zh-CN/master/index.html',
-          lable: '查看教程',
-        },
-      ],
-    },
-    {
-      title: '支持',
-      children: [
-        { link: 'https://gitee.com/mindspore', lable: '社区' },
-        { link: 'https://www.mindspore.cn/news', lable: '资讯' },
-        { link: 'https://www.mindspore.cn/security', lable: '安全' },
-        {
-          link: 'https://bbs.huaweicloud.com/forum/forum-1076-1.html',
-          lable: '论坛',
-        },
-      ],
-    },
-    {
-      title: '友情链接',
-      children: [
-        { link: 'https://ascend.huawei.com/', lable: '昇腾社区' },
-        {
-          link: 'https://www.huaweicloud.com/product/modelarts.html',
-          lable: 'ModelArts',
-        },
-      ],
-    },
-  ],
-  about: {
-    text: '关注我们',
-    codeImg: [
-      {
-        cover: '/img/weixin-code.png',
-        icon: '/img/wechart.png',
-        iconHover: '/img/wechart-hover.png',
-        lable: '打开微信扫一扫',
-      },
-      {
-        cover: '/img/bilibili-code.png',
-        icon: '/img/bilibili.png',
-        iconHover: '/img/bilibili-hover.png',
-        lable: '打开B站扫一扫',
-      },
-      {
-        cover: '/img/douyin-code.png',
-        icon: '/img/douyin.png',
-        iconHover: '/img/douyin-hover.png',
-        lable: '打开抖音扫一扫',
-      },
-      {
-        cover: '/img/qq-code.png',
-        icon: '/img/qq.png',
-        iconHover: '/img/qq-hover.png',
-        lable: '打开QQ扫一扫',
-      },
-    ],
+import { useI18n } from '@/i18n';
+import AppContent from '@/components/AppContent.vue';
+
+import wechart from '@/assets/common/wechart.png';
+import wechart_code from '@/assets/common/weixin-code.png';
+import wechart_hover from '@/assets/common/wechart-hover.png';
+import bilibili from '@/assets/common/bilibili.png';
+import bilibili_code from '@/assets/common/bilibili-code.png';
+import bilibili_hover from '@/assets/common/bilibili-hover.png';
+import douyin from '@/assets/common/douyin.png';
+import douyin_code from '@/assets/common/douyin-code.png';
+import douyin_hover from '@/assets/common/douyin-hover.png';
+import qq from '@/assets/common/qq.png';
+import qq_code from '@/assets/common/qq-code.png';
+import qq_hover from '@/assets/common/qq-hover.png';
+
+const i18n = useI18n();
+
+const footerCodeImg = [
+  {
+    cover: wechart_code,
+    icon: wechart,
+    iconHover: wechart_hover,
+    lable: '打开微信扫一扫',
   },
-  copyright: {
-    lable: '版权所有©MindSpore 2022',
-    beian: '粤A2-20044005号',
-    beianPath: 'https://beian.miit.gov.cn',
+  {
+    cover: bilibili_code,
+    icon: bilibili,
+    iconHover: bilibili_hover,
+    lable: '打开B站扫一扫',
   },
-  record: {
-    path: 'https://beian.miit.gov.cn',
-    img: '/img/copyright.png',
-    keepRecord: '粤公网安备',
-    recordNum: '44030702002890号',
+  {
+    cover: douyin_code,
+    icon: douyin,
+    iconHover: douyin_hover,
+    lable: '打开抖音扫一扫',
   },
-  statement: [
-    { path: 'https://status.mindspore.cn/', lable: '服务状态' },
-    { path: 'https://www.mindspore.cn/legal', lable: '法律声明' },
-    { path: 'https://www.mindspore.cn/privacy', lable: '个人信息保护政策' },
-  ],
-};
+  {
+    cover: qq_code,
+    icon: qq,
+    iconHover: qq_hover,
+    lable: '打开QQ扫一扫',
+  },
+];
 </script>
 
 <template>
-  <div class="footer-main">
-    <div class="wrapper">
-      <div class="footer-content">
-        <div class="logo">
-          <img :src="footer.logo" alt="" />
-        </div>
-        <div class="footer-menu">
-          <div class="item" v-for="(item, index) in footer.menu" :key="index">
-            <p class="title">{{ item.title }}</p>
-            <div
-              class="footer_link"
-              v-for="(clild, indx) in item.children"
-              :key="indx"
-            >
-              <a :href="clild.link" target="_blank">{{ clild.lable }}</a>
-            </div>
+  <footer>
+    <div class="footer-main">
+      <AppContent>
+        <div class="footer-content">
+          <div class="logo">
+            <img :src="i18n.common.footer.logo" alt="" />
           </div>
-        </div>
-        <div class="aboutus">
-          <p class="text">{{ footer.about.text }}</p>
-          <div class="aboutus-tile">
+          <div class="footer-menu">
             <div
-              class="code-box"
-              v-for="(item, index) in footer.about.codeImg"
+              class="item"
+              v-for="(item, index) in i18n.common.footer.menu"
               :key="index"
             >
-              <a href="javasript:;" target="_blank">
-                <img :src="item.icon" class="img" alt="" />
-                <img :src="item.iconHover" class="img-hover" alt="" />
-                <div class="code-box-hover">
-                  <span class="hover-item">
-                    <img :src="item.cover" alt="" />
-                    <p class="code-box-txt">{{ item.lable }}</p>
-                  </span>
-                </div>
-              </a>
+              <p class="title">{{ item.title }}</p>
+              <div
+                class="footer_link"
+                v-for="(clild, indx) in item.children"
+                :key="indx"
+              >
+                <a :href="clild.link" target="_blank">{{ clild.lable }}</a>
+              </div>
+            </div>
+          </div>
+          <div class="aboutus">
+            <p class="text">{{ i18n.common.footer.about_text }}</p>
+            <div class="aboutus-tile">
+              <div
+                class="code-box"
+                v-for="(item, index) in footerCodeImg"
+                :key="index"
+              >
+                <a href="javasript:;" target="_blank">
+                  <img :src="item.icon" class="img" alt="" />
+                  <img :src="item.iconHover" class="img-hover" alt="" />
+                  <div class="code-box-hover">
+                    <span class="hover-item">
+                      <img :src="item.cover" alt="" />
+                      <p class="code-box-txt">{{ item.lable }}</p>
+                    </span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </AppContent>
     </div>
-  </div>
-  <div class="wrapper">
-    <div class="site-info">
-      <div class="site-info-left">
-        <div class="copyright">
-          <span>{{ footer.copyright.lable }}</span>
+    <AppContent>
+      <div class="site-info">
+        <div class="site-info-left">
+          <div class="copyright">
+            <span>{{ i18n.common.footer.copyright.lable }}</span>
+            <a
+              class="copynum"
+              :href="i18n.common.footer.copyright.beianPath"
+              target="_blank"
+              >{{ i18n.common.footer.copyright.beian }}</a
+            >
+          </div>
           <a
-            class="copynum"
-            :href="footer.copyright.beianPath"
+            class="record"
+            :href="i18n.common.footer.record.path"
             target="_blank"
-            >{{ footer.copyright.beian }}</a
+          >
+            <img :src="i18n.common.footer.record.img" />
+            <span class="keepRecord">{{
+              i18n.common.footer.record.keepRecord
+            }}</span>
+            <span class="recordNum">{{
+              i18n.common.footer.record.recordNum
+            }}</span>
+          </a>
+        </div>
+        <div class="site-info-right">
+          <a
+            :href="item.path"
+            v-for="item in i18n.common.footer.statement"
+            :key="item.path"
+            >{{ item.lable }}</a
           >
         </div>
-        <a class="record" :href="footer.record.path" target="_blank">
-          <img :src="footer.record.img" />
-          <span class="keepRecord">{{ footer.record.keepRecord }}</span>
-          <span class="recordNum">{{ footer.record.recordNum }}</span>
-        </a>
       </div>
-      <div class="site-info-right">
-        <a
-          :href="item.path"
-          v-for="item in footer.statement"
-          :key="item.path"
-          >{{ item.lable }}</a
-        >
-      </div>
-    </div>
-  </div>
+    </AppContent>
+  </footer>
 </template>
 
 <style lang="scss" scoped>
+footer {
+  background-color: var(--o-color-bg1);
+  .app-content {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 .site-info {
   display: flex;
   padding-top: 30px;
@@ -167,13 +147,13 @@ const footer = {
   justify-content: space-between;
   .copyright {
     font-size: 14px;
-    color: var(--theme-text);
+    color: var(--o-color-text4);
     line-height: 18px;
     margin-bottom: 6px;
   }
   .record {
     font-size: 12px;
-    color: var(--theme-text);
+    color: var(--o-color-text4);
     line-height: 18px;
   }
   .site-info-right {
@@ -181,7 +161,7 @@ const footer = {
       margin-bottom: 6px;
       padding-right: 12px;
       padding-left: 12px;
-      border-right: 1px solid var(--theme-text-ass);
+      border-right: 1px solid #fff;
       &:last-child {
         padding-right: 0;
         border-right: none;
@@ -190,23 +170,24 @@ const footer = {
   }
   a {
     font-size: 14px;
-    color: var(--theme-text);
+    color: var(--o-color-text4);
     line-height: 18px;
     &:hover {
-      color: var(--theme-active);
+      color: var(--o-color-brand1);
     }
   }
 }
 .footer-main {
-  background: var(--theme-card-black) url('/img/foot-bg.png') no-repeat top
-    center;
+  background: var(--o-color-greyblack1) url('@/assets/common/foot-bg.png')
+    no-repeat top center;
   padding-top: 50px;
   padding-bottom: 40px;
   min-height: 270px;
+
   .aboutus {
     .text {
       font-size: 16px;
-      color: var(--theme-white);
+      color: #fff;
       line-height: 18px;
       margin-bottom: 16px;
     }
@@ -231,19 +212,19 @@ const footer = {
       width: 216px;
       margin-right: 24px;
       .title {
-        font-size: 16px;
-        color: var(--theme-white);
-        line-height: 18px;
+        font-size: var(--o-font-size-h8);
+        line-height: var(--o-line-height-h8);
+        color: #fff;
         margin-bottom: 18px;
       }
       .footer_link {
         a {
-          font-size: 12px;
-          color: var(--theme-text-ass);
-          line-height: 22px;
+          font-size: var(--o-font-size-text);
+          line-height: var(--o-line-height-text);
+          color: #fff;
           margin-bottom: 8px;
           &:hover {
-            color: var(--theme-active);
+            color: var(--o-color-brand1);
           }
         }
       }
@@ -278,7 +259,7 @@ const footer = {
       }
     }
     &-hover {
-      background: var(--theme-white);
+      background: #fff;
       position: absolute;
       top: -142px;
       left: 50%;
@@ -291,7 +272,7 @@ const footer = {
       &:after {
         content: '';
         border: 8px solid transparent;
-        border-top-color: var(--theme-white);
+        border-top-color: #fff;
         transform: translateX(-50%);
         display: block;
         position: absolute;

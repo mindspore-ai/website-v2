@@ -4,12 +4,11 @@ import { useRouter } from 'vitepress';
 
 import AMapLoader from '@amap/amap-jsapi-loader';
 
-import OIcon from '@/components/OIcon.vue';
-import IconRight from '~icons/appbak/arrow-right.svg';
-import IconTime from '~icons/appbak/time.svg';
-import IconLink from '~icons/appbak/link.svg';
-import MapMarker from '@/assets/category/calendar/position.svg';
-
+import logo from '@/assets/common/logo.png';
+import IconRight from '~icons/app/icon-arrow-right.svg';
+import IconTime from '~icons/app/icon-time.svg';
+import IconLink from '~icons/app/icon-link.svg';
+import MapMarker from '~icons/app/icon-map-pin.svg';
 
 import { getBetweenDateStr } from '@/shared/utils';
 
@@ -233,7 +232,7 @@ onMounted(() => {
           <h1 class="detail-title">{{ tabTitle[tabIndex] }}</h1>
           <div :class="['meet-address']">
             <div class="address-message">
-              <img src="/img/logo.png" />
+              <img :src="logo" />
             </div>
             <div class="address-text">
               <p>地址</p>

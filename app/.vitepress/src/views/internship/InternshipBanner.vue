@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import OButton from '@/components/OButton.vue';
-
 import HomeBanner from '@/assets/home/banner.jpg';
-import IconArrowRight from '~icons/appbak/icon-arrow.svg';
+import IconArrowRight from '~icons/app/icon-arrow-right.svg';
 </script>
 
 <template>
@@ -11,28 +9,30 @@ import IconArrowRight from '~icons/appbak/icon-arrow.svg';
       <h2 class="title">昇思MindSpore开源实习</h2>
       <div class="action">
         <a href="#task">
-          <OButton size="large" type="primary" placement="right">
+          <OButton animation type="primary">
             领取任务
-            <template #right
-              ><OIcon><IconArrowRight /></OIcon></template
-          ></OButton>
+            <template #suffixIcon>
+              <IconArrowRight />
+            </template>
+          </OButton>
         </a>
         <a href="https://www.openeuler.org/zh/internship/" target="_blank">
-          <OButton size="large" placement="right">
+          <OButton animation>
             openEuler
-            <template #right
-              ><OIcon><IconArrowRight /></OIcon></template
-          ></OButton>
+            <template #suffixIcon>
+              <IconArrowRight />
+            </template>
+          </OButton>
         </a>
       </div>
     </div>
-    <img src="/img/internship/banner_mo.png" class="mo" />
+    <img src="/category/internship/banner_mo.png" class="mo" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .banner {
-  background: url(/img/internship/banner.jpg) no-repeat top center/cover;
+  background: url(/category/internship/banner.jpg) no-repeat top center/cover;
   height: 380px;
   .wrapper {
     position: relative;

@@ -30,7 +30,7 @@ const gotop = () => {
 <template>
   <div class="title-nav" :class="{ internship: internship }">
     <div class="box-line" :class="{ 'internship-line': internship }">
-      <img class="gotop" @click="gotop" src="/img/internship/top.png" />
+      <img class="gotop" @click="gotop" src="/category/internship/top.png" />
     </div>
     <div class="nav-text" :class="{ 'internship-nav': internship }">
       <ul>
@@ -51,13 +51,13 @@ const gotop = () => {
         <img
           class="close"
           @click="close()"
-          src="/img/internship/x.png"
+          src="/category/internship/x.png"
           alt=""
         />
-        <img class="code" src="/img/internship/qrCode2.png" alt="" />
+        <img class="code" src="/category/internship/qrCode2.png" alt="" />
       </div>
       <div class="item" v-show="show && internship">
-        <img class="code" src="/img/internship/qrCode3.png" alt="" />
+        <img class="code" src="/category/internship/qrCode3.png" alt="" />
       </div>
     </div>
   </div>
@@ -105,7 +105,8 @@ const gotop = () => {
         height: 32px;
         content: '';
         z-index: 1;
-        background: url(/img/internship/home-icon.png) no-repeat center/cover;
+        background: url(/category/internship/home-icon.png) no-repeat
+          center/cover;
         display: block;
         position: absolute;
         right: 5px;
