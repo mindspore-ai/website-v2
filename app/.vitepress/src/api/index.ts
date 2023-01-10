@@ -1,12 +1,11 @@
 import { request } from '@/shared/axios';
 import type { AxiosResponse } from '@/shared/axios';
 
-// 请求前缀
-const request_prefix = '/api-rank/';
+const WEBSITE_TEST = window.location.host.startsWith('localhost:')
+  ? 'https://www.mindspore.cn'
+  : '';
 
-export function getRank(params: object) {
-  const url = `intern/points/sort/lists`;
-  return request
-    .get(request_prefix + url, { params })
-    .then((res: AxiosResponse) => res.data);
+export function getVideo(lang: string) {
+  const url = WEBSITE_TEST + `/latestvideo/list/?lang=${lang}`;
+  return request.get(url).then((res: AxiosResponse) => res.data);
 }

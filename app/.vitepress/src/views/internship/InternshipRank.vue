@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import { getRank } from '@/api';
+import { getRank } from '@/api/api-internship';
 
 interface RankType {
   userId: Number;

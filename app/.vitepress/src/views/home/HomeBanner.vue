@@ -73,27 +73,8 @@ const videoClickBtn = (path: string) => {
       @swiper="onSwiper"
     >
       <swiper-slide v-for="(item, index) in homeBanner" :key="item.link">
-        <a class="banner-panel" :class="item.className" @click="jump(item)">
-          <div v-if="item.type === 5" class="banner-video">
-            <template v-if="windowWidth > 767">
-              <video
-                muted
-                playsinline="true"
-                autoplay=""
-                loop
-                :poster="item.pcBanner"
-                preload=""
-              >
-                <source
-                  type="video/mp4"
-                  src="https://opengauss-showroom-video.obs.cn-north-4.myhuaweicloud.com/openGauss%20Summit%202022/Banner/openGauss%20Banner%E5%8A%A8K_1920x480.mp4"
-                />
-              </video>
-            </template>
-            <img v-else :src="item.moBanner" />
-          </div>
+        <div class="banner-panel" :class="item.className" @click="jump(item)">
           <div
-            v-else
             class="banner-panel-cover"
             :class="{
               'banner-pic': item.title === '',
@@ -148,7 +129,7 @@ const videoClickBtn = (path: string) => {
               </div>
             </div>
           </div>
-        </a>
+        </div>
       </swiper-slide>
     </swiper>
   </div>

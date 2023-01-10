@@ -224,7 +224,7 @@ footer {
           color: #fff;
           margin-bottom: 8px;
           &:hover {
-            color: var(--o-color-brand1);
+            text-decoration: underline;
           }
         }
       }

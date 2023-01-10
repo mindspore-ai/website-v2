@@ -124,6 +124,9 @@
     margin-left: var(--o-button-icon-margin);
     font-size: var(--o-button-icon-font-size);
     transition: all 0.2s linear;
+    svg {
+      font-size: var(--o-button-icon-font-size);
+    }
   }
 
   &.animation:hover .prefix-icon {
@@ -158,6 +161,10 @@
     .suffix-icon {
       margin-left: var(--o-button-icon-margin-small);
       font-size: var(--o-button-icon-font-size-small);
+      svg {
+        width: var(--o-button-icon-font-size-small);
+        height: var(--o-button-icon-font-size-small);
+      }
     }
   }
 
