@@ -10,6 +10,13 @@ const router = useRouter();
 const TASK = {
   TASK_ITEM: [
     {
+      NAME: '易用性',
+      INTRODUCE:
+        '易用性 SIG致力于和开发者共同打造易学易用、灵活高效的AI框架，持续提升MindSpore易用性，助力开发者成功',
+      TASK: 'https://gitee.com/mindspore/community/issues/I55JQY',
+      GITEE: 'https://gitee.com/mindspore/community/issues/I55QGD',
+    },
+    {
       NAME: 'SIG-Compiler	',
       INTRODUCE: 'Compiler SIG聚焦于AI编译器前端的图优化',
       TASK: 'https://gitee.com/mindspore/community/issues/I5591E',
@@ -103,13 +110,6 @@ const TASK = {
       GITEE: 'https://gitee.com/mindspore/community/issues/I55QGD',
     },
     {
-      NAME: '易用性',
-      INTRODUCE:
-        '易用性 SIG致力于和开发者共同打造易学易用、灵活高效的AI框架，持续提升MindSpore易用性，助力开发者成功',
-      TASK: 'https://gitee.com/mindspore/community/issues/I55JQY',
-      GITEE: 'https://gitee.com/mindspore/community/issues/I55QGD',
-    },
-    {
       NAME: '安全',
       INTRODUCE:
         'AI Security SIG 聚焦于AI模型开发项目中从数据处理到模型训练再到部署推理过程中的安全问题',
@@ -189,7 +189,7 @@ const go = (path: string) => {
     .item-intriduce {
       padding-top: 8px;
       margin-bottom: 20px;
-      height: 70px; 
+      height: 70px;
       font-size: 14px;
       line-height: 22px;
       overflow: hidden;
