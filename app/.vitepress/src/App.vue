@@ -28,5 +28,9 @@ let locale = ref(zhCn);
 }
 .content {
   min-height: calc(100vh - 80px);
+  padding-top: 80px;
+  @media (max-width: 1100px) {
+    padding-top: 48px;
+  }
 }
 </style>
