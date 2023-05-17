@@ -112,7 +112,7 @@ const HELP = {
     '联系邮箱:',
     'intern@openeuler.sh',
     '扫码加入导师答疑群，更多关于昇思MindSpore实习任务答疑群内咨询。群号：771293469',
-    '扫码加入“开源实习”学生QQ群，更多问题群内咨询。群号：458603235',
+    '扫码加入“开源实习”学生QQ群，更多问题群内咨询。群号：526089131',
   ],
   ITEM: [
     {
@@ -120,7 +120,7 @@ const HELP = {
       TEXT: '昇思MindSpore导师答疑群',
     },
     {
-      IMG: '/img/internship/qrCode1.png',
+      IMG: '/img/internship/qrCode1.jpg',
       TEXT: '开源实习群',
     },
   ],

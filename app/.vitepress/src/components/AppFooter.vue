@@ -68,7 +68,7 @@ const footer = {
     ],
   },
   copyright: {
-    lable: '版权所有©MindSpore 2022',
+    lable: '版权所有©MindSpore 2023',
     beian: '粤A2-20044005号',
     beianPath: 'https://beian.miit.gov.cn',
   },
