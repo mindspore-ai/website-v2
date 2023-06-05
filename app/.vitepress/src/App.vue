@@ -6,7 +6,7 @@ import AppFooter from '@/components/AppFooter.vue';
 import zhCn from 'element-plus/lib/locale/lang/zh-cn';
 import { ElConfigProvider } from 'element-plus';
 
-let locale = ref(zhCn);
+const locale = ref(zhCn);
 </script>
 
 <template>

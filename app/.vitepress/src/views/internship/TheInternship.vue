@@ -161,7 +161,8 @@ const NAV_LIST = [
 ];
 
 const scroTop = () => {
-  let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  const scrollTop =
+    document.body.scrollTop || document.documentElement.scrollTop;
 
   if (scrollTop < 270 || scrollTop > 7200) {
     isShowNav.value = false;
@@ -200,10 +201,10 @@ onUnmounted(() => {
 
 <template>
   <OTitleNav
-    class="titlenav"
     v-show="isShowNav"
-    :currentIndex="activeIndex"
-    :dataList="NAV_LIST"
+    class="titlenav"
+    :current-index="activeIndex"
+    :data-list="NAV_LIST"
     :internship="true"
   ></OTitleNav>
   <InternshipBanner />
@@ -233,10 +234,10 @@ onUnmounted(() => {
       <div class="integral-border">
         <div class="integral-content">
           <div
-            class="integral-item"
             v-for="(item, index) in INTEGRAL_DATA"
-            :class="{ circular: index !== 3 }"
             :key="item.HEAD"
+            class="integral-item"
+            :class="{ circular: index !== 3 }"
           >
             <h3>{{ item.HEAD }}</h3>
             <div v-for="(item1, index1) in item.TEXT" :key="item1" class="star">
@@ -271,9 +272,9 @@ onUnmounted(() => {
       <div class="rule-content">
         <div class="wrapper">
           <div
-            class="rule-item"
             v-for="(item, index) in RULE.RULE_DATA"
             :key="index"
+            class="rule-item"
           >
             <div class="question">{{ item.QUESTION }}</div>
             <div class="answer">{{ item.ANSWER }}</div>
@@ -300,9 +301,9 @@ onUnmounted(() => {
         </div>
         <div class="img-list">
           <div
-            class="img-cover"
             v-for="(item, index) in PARTNER_DATA"
             :key="index"
+            class="img-cover"
           >
             <img alt="" :src="item.IMG" />
           </div>
@@ -310,7 +311,7 @@ onUnmounted(() => {
       </div>
     </section>
   </main>
-  <div class="help-title title" id="help">
+  <div id="help" class="help-title title">
     <img :src="HelpTitle" alt="" />
   </div>
   <div class="help-wrap">
