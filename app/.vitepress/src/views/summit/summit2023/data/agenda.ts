@@ -18,39 +18,21 @@ export default {
           content: [
             {
               id: 'id1-1-1',
-              time: '9:30-9:45',
-              desc: '领导致辞',
+              time: '9:30-9:50',
+              desc: '开场致辞',
               person: [
                 {
                   id: 'id1-1-1-1',
-                  name: '上海市领导',
+                  name: '',
                   post: '',
-                },
-                {
-                  id: 'id1-1-1-2',
-                  name: '工信部领导',
-                  post: '',
-                },
-              ],
-              detail: '',
-            },
-            {
-              id: 'id1-1-11',
-              time: '9:30-9:45',
-              desc: '院士分享',
-              person: [
-                {
-                  id: 'id1-1-11-3',
-                  name: '丁奎岭',
-                  post: '中国科学院院士',
                 },
               ],
               detail: '',
             },
             {
               id: 'id1-1-2',
-              time: '9:45-9:50',
-              desc: '产业倡导',
+              time: '9:50-9:55',
+              desc: '“共建人工智能框架生态，繁荣中国人工智能产业”倡议',
               person: [
                 {
                   id: 'id1-1-2-1',
@@ -62,8 +44,8 @@ export default {
             },
             {
               id: 'id1-1-21',
-              time: '9:50-9:55',
-              desc: '共建AI开源生态—昇思MindSpore社区理事会成立',
+              time: '9:55-10:00',
+              desc: '上海昇思AI框架&大模型创新中心启动暨伙伴入驻仪式',
               person: [
                 {
                   id: 'id1-1-21-1',
@@ -75,8 +57,8 @@ export default {
             },
             {
               id: 'id1-1-22',
-              time: '9:55-10:00',
-              desc: '共建AI开源生态—昇思MindSpore技术委员会专家聘请仪式',
+              time: '10:00-10:05',
+              desc: '昇思MindSpore社区理事会成立',
               person: [
                 {
                   id: 'id1-1-22-1',
@@ -88,8 +70,8 @@ export default {
             },
             {
               id: 'id1-1-23',
-              time: '10:00-10:05',
-              desc: '共建AI开源生态—昇思MindSpore生态创新中心揭牌、伙伴入驻仪式',
+              time: '10:05-10:10',
+              desc: '昇思MindSpore技术委员会专家聘请仪式',
               person: [
                 {
                   id: 'id1-1-23-1',
@@ -101,8 +83,8 @@ export default {
             },
             {
               id: 'id1-1-3',
-              time: '10:05-10:15',
-              desc: '使能大模型创新—从微观分子到地球生态:AI加速水分子奥秘探索',
+              time: '10:10-10:20',
+              desc: '从微观分子到地球生态：AI加速水分子奥秘探索',
               person: [
                 {
                   id: 'id1-1-3-1',
@@ -114,8 +96,8 @@ export default {
             },
             {
               id: 'id1-1-31',
-              time: '10:15-10:25',
-              desc: '使能大模型创新—紫东.太初2.0:基于昇思的全球首个全模态大模型',
+              time: '10:20-10:30',
+              desc: '紫东.太初2.0：基于昇思的全球首个全模态大模型',
               person: [
                 {
                   id: 'id1-1-31-2',
@@ -127,34 +109,34 @@ export default {
             },
             {
               id: 'id1-1-4',
-              time: '10:25-10:35',
-              desc: '南北向全面开放繁荣人工智能产业—凝心聚力，共建AI框架开源新生态',
+              time: '10:30-10:40',
+              desc: '凝心聚力，共建AI框架开源新生态',
               person: [
                 {
                   id: 'id1-1-4-1',
                   name: '丁诚',
-                  post: '昇思社区理事长',
+                  post: '昇思MindSpore开源社区理事长',
                 },
               ],
               detail: '',
             },
             {
               id: 'id1-1-41',
-              time: '10:35-10:45',
-              desc: '南北向全面开放繁荣人工智能产业—开放、融合、共享，赋能自主AI生态',
+              time: '10:40-10:50',
+              desc: '开放、融合、共享，以大算力赋能AI产业生态',
               person: [
                 {
                   id: 'id1-1-41-2',
                   name: '徐凌杰',
-                  post: '壁仞科技总裁',
+                  post: '壁仞联合创始人、总裁',
                 },
               ],
               detail: '',
             },
             {
               id: 'id1-1-42',
-              time: '10:45-10:55',
-              desc: '南北向全面开放繁荣人工智能产业—打造自主创新平台 云从科技助力产业数智化加速',
+              time: '10:50-11:00',
+              desc: '打造自主创新平台 云从科技助力产业数智化加速',
               person: [
                 {
                   id: 'id1-1-4-3',
@@ -165,22 +147,9 @@ export default {
               detail: '',
             },
             {
-              id: 'id1-1-43',
-              time: '10:55-11:05',
-              desc: '南北向全面开放繁荣人工智能产业—交行金融行业备选客户',
-              person: [
-                {
-                  id: 'id1-1-43-3',
-                  name: '交行领导',
-                  post: '',
-                },
-              ],
-              detail: '',
-            },
-            {
               id: 'id1-1-5',
-              time: '11:05-11:15',
-              desc: 'AI框架技术演进—新时代的AI框架：昇思2.0全新技术升级',
+              time: '11:00-11:10',
+              desc: '新时代的AI框架：昇思2.0全新技术升级',
               person: [
                 {
                   id: 'id1-1-5-1',
@@ -193,8 +162,8 @@ export default {
 
             {
               id: 'id1-1-6',
-              time: '11:15-11:25',
-              desc: '发展AI人才—科技赋能产教融合，开创人工智能人才培养新模式',
+              time: '11:10-11:15',
+              desc: '国家全民数字素养与技能培训基地授牌仪式',
               person: [
                 {
                   id: 'id1-1-6-1',
@@ -206,8 +175,21 @@ export default {
             },
             {
               id: 'id1-1-7',
+              time: '11:15-11:25',
+              desc: '科技赋能产教融合，开创人工智能人才培养新模式',
+              person: [
+                {
+                  id: '',
+                  name: '',
+                  post: '',
+                },
+              ],
+              detail: '',
+            },
+            {
+              id: 'id1-1-7',
               time: '11:25-11:30',
-              desc: '颁奖—昇思MindSpore开源社区卓越贡献者颁奖',
+              desc: '昇思MindSpore开源社区卓越贡献者颁奖',
               person: [
                 {
                   id: '',
@@ -232,7 +214,7 @@ export default {
             {
               id: 'otherid1-1-1',
               time: '13:35-13:40',
-              desc: '开场致词-开源开放促AI技术繁荣发展',
+              desc: '开场致词——开源开放促AI技术繁荣发展',
               person: [
                 {
                   id: 'otherid1-1-1-1',
@@ -245,7 +227,7 @@ export default {
             {
               id: 'otherid1-1-2',
               time: '13:40-13:50',
-              desc: '开源开放-新一代人工智能开源服务环境',
+              desc: '开源开放——新一代人工智能开源服务环境',
               person: [
                 {
                   id: 'otherid1-1-2-1',
@@ -258,7 +240,7 @@ export default {
             {
               id: 'otherid1-1-3',
               time: '13:50-14:00',
-              desc: '开源开放-基于大数据与人工智能的智能运维',
+              desc: '开源开放——基于大数据与人工智能的智能运维',
               person: [
                 {
                   id: 'otherid1-1-3-1',
@@ -271,7 +253,7 @@ export default {
             {
               id: 'otherid1-1-4',
               time: '14:00-14:10',
-              desc: '开源开放-昇思MindSpore开源生态及大模型平台创新实践',
+              desc: '开源开放——昇思MindSpore开源生态及大模型平台创新实践',
               person: [
                 {
                   id: 'otherid1-1-4-1',
@@ -284,7 +266,7 @@ export default {
             {
               id: 'otherid1-1-5',
               time: '14:10-14:20',
-              desc: '创新共建-人工智能时代的分子动力学模拟',
+              desc: '创新共建——分子科学中的人工智能：新机遇与新挑战',
               person: [
                 {
                   id: 'otherid1-1-5-1',
@@ -297,7 +279,7 @@ export default {
             {
               id: 'otherid1-1-6',
               time: '14:20-14:35',
-              desc: '创新共建-基于昇思MindSpore的锂电领域AI安全生产及园区行业解决方案',
+              desc: '创新共建——AI赋能工业制造，为企业安全生产保驾护航',
               person: [
                 {
                   id: 'otherid1-1-6-1',
@@ -310,7 +292,7 @@ export default {
             {
               id: 'otherid1-1-7',
               time: '14:35-14:50',
-              desc: '创新共建-昇思MindSpore助力医学诊断数字化升级',
+              desc: '创新共建——泛在，均等，共享——基础模型推动构筑MaaS新格局',
               person: [
                 {
                   id: 'otherid1-1-7-1',
@@ -323,7 +305,7 @@ export default {
             {
               id: 'otherid1-1-8',
               time: '14:50-15:05',
-              desc: '我与昇思共成长-与昇思MindSpore共成长：大学本科到研究生的升级跃迁',
+              desc: '我与昇思共成长——与昇思MindSpore共成长：大学本科到研究生的升级跃迁',
               person: [
                 {
                   id: 'otherid1-1-8-1',
@@ -336,7 +318,7 @@ export default {
             {
               id: 'otherid1-1-9',
               time: '15:05-15:20',
-              desc: '我与昇思共成长-开发者颁奖',
+              desc: '我与昇思共成长——开发者颁奖',
               person: [
                 {
                   id: 'otherid1-1-9-1',
@@ -468,22 +450,22 @@ export default {
               ],
               detail: '',
             },
-            {
-              id: 'other1id2-1-2',
-              time: '14:50-15:10',
-              desc: 'CodeGeeX 多语言代码生成模型与最佳实践',
-              person: [
-                {
-                  id: 'other1id2-1-2-1',
-                  name: '郑勤锴',
-                  post: '清华大学KEG知识工程实验室研究助理',
-                },
-              ],
-              detail: '',
-            },
+            // {
+            //   id: 'other1id2-1-2',
+            //   time: '14:50-15:10',
+            //   desc: 'CodeGeeX 多语言代码生成模型与最佳实践',
+            //   person: [
+            //     {
+            //       id: 'other1id2-1-2-1',
+            //       name: '郑勤锴',
+            //       post: '清华大学KEG知识工程实验室研究助理',
+            //     },
+            //   ],
+            //   detail: '',
+            // },
             {
               id: 'other1id2-1-3',
-              time: '15:10-15:30',
+              time: '14:50-15:10',
               desc: '基于算力网的协同计算技术及AISynergy平台',
               person: [
                 {
@@ -496,7 +478,7 @@ export default {
             },
             {
               id: 'other1id2-1-4',
-              time: '15:30-15:50',
+              time: '15:10-15:30',
               desc: '华为诺亚盘古Σ万亿参数基础语言模型',
               person: [
                 {
@@ -509,7 +491,7 @@ export default {
             },
             {
               id: 'other1id2-1-5',
-              time: '15:50-16:10',
+              time: '15:30-15:50',
               desc: '多模态通用生成模型及落地应用',
               person: [
                 {
@@ -522,7 +504,7 @@ export default {
             },
             {
               id: 'other1id2-1-6',
-              time: '16:10-16:30',
+              time: '15:50-16:10',
               desc: 'CPM-让大模型飞入千家万户',
               person: [
                 {
@@ -572,7 +554,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-3-1',
-                  name: '周爱民',
+                  name: '张凯',
                   post: '华东师范大学计算机科学与技术学院副院长、华东师范大学上海智能教育研究院副院长',
                 },
               ],
@@ -612,7 +594,7 @@ export default {
                 {
                   id: 'other1id3-1-6-1',
                   name: '赖铖',
-                  post: '鹏城实验室网络智能部高级工程师',
+                  post: '鹏城实验室网络智能部算法工程师',
                 },
               ],
               detail: '',

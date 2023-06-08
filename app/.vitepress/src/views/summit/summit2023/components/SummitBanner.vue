@@ -42,7 +42,8 @@ onMounted(() => {
           <a :href="bannerData.btnLink" target="_blank">
             <OButton
               :size="screenWidth > 767 ? 'nomral' : 'mini'"
-              :type="screenWidth > 767 ? 'primary' : ''"
+              type="outline"
+              animation
               >{{ bannerData.btn }}
               <template #suffixIcon
                 ><OIcon><IconRight /></OIcon></template
@@ -206,6 +207,7 @@ onMounted(() => {
         display: inline-block;
         .o-button {
           color: #fff;
+          border: 1px solid #fff;
           @media (max-width: 767px) {
             border-color: #fff;
             :deep(.suffix-icon) {

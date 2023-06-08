@@ -41,7 +41,7 @@ const summitStyle = computed(() => {
 });
 onMounted(() => {
   AOS.init({
-    offset: 200,
+    offset: 100,
     duration: 800,
     delay: 100,
   });
@@ -53,32 +53,26 @@ onMounted(() => {
     <div
       v-for="item in lecturerList"
       :key="item.NAME"
-      data-aos="fade-zoom-in"
+      data-aos="fade-up"
       class="lecturer-list-item"
     >
-      <slot name="img">
-        <div
-          :class="
-            summitStyle['--shape'] === 'square'
-              ? 'lecturer-list-item-square'
-              : 'lecturer-list-item-circle'
-          "
-        >
-          <img :src="item.img" />
-        </div>
-      </slot>
-      <slot name="name">
-        <p class="name">{{ item.name }}</p>
-      </slot>
-      <slot name="title">
-        <p
-          v-for="titleItem in item.position"
-          :key="titleItem"
-          class="lecturer-list-item-title"
-        >
-          {{ titleItem }}
-        </p>
-      </slot>
+      <div
+        :class="
+          summitStyle['--shape'] === 'square'
+            ? 'lecturer-list-item-square'
+            : 'lecturer-list-item-circle'
+        "
+      >
+        <img :src="item.img" />
+      </div>
+      <p class="name">{{ item.name }}</p>
+      <p
+        v-for="titleItem in item.position"
+        :key="titleItem"
+        class="lecturer-list-item-title"
+      >
+        {{ titleItem }}
+      </p>
     </div>
   </div>
 </template>
@@ -91,13 +85,13 @@ onMounted(() => {
   margin: var(--o-spacing-h2) auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(82px, 1fr));
-  column-gap: 0;
-  row-gap: 0;
+  gap: 40px;
   @media (max-width: 1416px) {
     grid-template-columns: repeat(3, 1fr);
   }
   @media (max-width: 780px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
   .lecturer-list-item {
     // width: 354px;
@@ -133,18 +127,20 @@ onMounted(() => {
       }
     }
     .name {
-      font-size: var(--o-font-size-h5);
+      font-size: var(--o-font-size-h8);
+      line-height: var(--o-line-height-h8);
       color: var(--o-color-brand1);
       text-align: center;
       margin: 14px 0;
       @media (max-width: 780px) {
         font-size: var(--o-font-size-text);
+        line-height: var(--o-line-height-text);
         margin-top: 6px;
       }
     }
     .lecturer-list-item-title {
       color: var(--o-color-text1);
-      font-size: var(--o-font-size-h8);
+      font-size: var(--o-font-size-text);
       font-weight: 400;
       text-align: center;
       line-height: var(--o-line-height-text);
@@ -155,12 +151,6 @@ onMounted(() => {
       }
       & + .lecturer-list-item-title {
         margin-top: 2px;
-      }
-      &:nth-last-of-type(1) {
-        margin-bottom: var(--o-spacing-h4);
-        @media (max-width: 780px) {
-          margin-bottom: var(--o-spacing-h6);
-        }
       }
     }
   }
