@@ -64,6 +64,7 @@ onMounted(() => {
         "
       >
         <img :src="item.img" />
+        <!-- <p v-else>暂无</p> -->
       </div>
       <p class="name">{{ item.name }}</p>
       <p

@@ -20,7 +20,7 @@ export default {
     img_mo: bannerSummitMo,
     slogan: '一起昇思  无尽创新',
     title: '人工智能框架生态峰会2023',
-    subtitle: '6月16日 中国·上海大零号湾会议中心',
+    subtitle: '6月16日 上海闵行大零号湾科创大厦（主论坛）闵行星河湾酒店（专题论坛）',
     btn: '立即报名',
     btnLink: 'https://e-campaign.huawei.com/m/yMrEzu',
   },

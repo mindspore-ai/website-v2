@@ -101,8 +101,8 @@ export default {
               person: [
                 {
                   id: 'id1-1-31-2',
-                  name: '徐波',
-                  post: '中科院自动化所所长',
+                  name: '徐　波',
+                  post: '中国科学院自动化研究所所长',
                 },
               ],
               detail: '',
@@ -114,7 +114,7 @@ export default {
               person: [
                 {
                   id: 'id1-1-4-1',
-                  name: '丁诚',
+                  name: '丁　诚',
                   post: '昇思MindSpore开源社区理事长',
                 },
               ],
@@ -153,7 +153,7 @@ export default {
               person: [
                 {
                   id: 'id1-1-5-1',
-                  name: '于璠',
+                  name: '于　璠',
                   post: '昇思MindSpore首席科学家',
                 },
               ],
@@ -204,7 +204,7 @@ export default {
       ],
     },
     {
-      lable: '开源共建：MindSpore TechDay（13:35-15:30）',
+      lable: 'MindSpore TechDay（13:30-16:00）',
       id: 'other',
       content: [
         {
@@ -214,7 +214,7 @@ export default {
             {
               id: 'otherid1-1-1',
               time: '13:35-13:40',
-              desc: '开场致词——开源开放促AI技术繁荣发展',
+              desc: '开源开放促AI技术繁荣发展',
               person: [
                 {
                   id: 'otherid1-1-1-1',
@@ -227,11 +227,11 @@ export default {
             {
               id: 'otherid1-1-2',
               time: '13:40-13:50',
-              desc: '开源开放——新一代人工智能开源服务环境',
+              desc: '新一代人工智能开源服务环境',
               person: [
                 {
                   id: 'otherid1-1-2-1',
-                  name: '余跃',
+                  name: '余　跃',
                   post: 'Openl启智开源平台运营中心主任',
                 },
               ],
@@ -240,7 +240,7 @@ export default {
             {
               id: 'otherid1-1-3',
               time: '13:50-14:00',
-              desc: '开源开放——基于大数据与人工智能的智能运维',
+              desc: '基于大数据与人工智能的智能运维',
               person: [
                 {
                   id: 'otherid1-1-3-1',
@@ -253,7 +253,7 @@ export default {
             {
               id: 'otherid1-1-4',
               time: '14:00-14:10',
-              desc: '开源开放——昇思MindSpore开源生态及大模型平台创新实践',
+              desc: '昇思MindSpore开源生态及大模型平台创新实践',
               person: [
                 {
                   id: 'otherid1-1-4-1',
@@ -266,11 +266,11 @@ export default {
             {
               id: 'otherid1-1-5',
               time: '14:10-14:20',
-              desc: '创新共建——分子科学中的人工智能：新机遇与新挑战',
+              desc: '分子科学中的人工智能：新机遇与新挑战',
               person: [
                 {
                   id: 'otherid1-1-5-1',
-                  name: '杨奕',
+                  name: '杨　奕',
                   post: '深圳湾实验室副研究员',
                 },
               ],
@@ -279,11 +279,11 @@ export default {
             {
               id: 'otherid1-1-6',
               time: '14:20-14:35',
-              desc: '创新共建——AI赋能工业制造，为企业安全生产保驾护航',
+              desc: 'AI赋能工业制造，为企业安全生产保驾护航',
               person: [
                 {
                   id: 'otherid1-1-6-1',
-                  name: '何欣',
+                  name: '何　欣',
                   post: '南京奥看信息科技有限公司CTO',
                 },
               ],
@@ -292,11 +292,11 @@ export default {
             {
               id: 'otherid1-1-7',
               time: '14:35-14:50',
-              desc: '创新共建——泛在，均等，共享——基础模型推动构筑MaaS新格局',
+              desc: '泛在，均等，共享——基础模型推动构筑MaaS新格局',
               person: [
                 {
                   id: 'otherid1-1-7-1',
-                  name: '王超',
+                  name: '王　超',
                   post: '杭州旷维炬锐有限公司创始人',
                 },
               ],
@@ -305,12 +305,12 @@ export default {
             {
               id: 'otherid1-1-8',
               time: '14:50-15:05',
-              desc: '我与昇思共成长——与昇思MindSpore共成长：大学本科到研究生的升级跃迁',
+              desc: '与昇思MindSpore共成长：大学本科到研究生的升级跃迁',
               person: [
                 {
                   id: 'otherid1-1-8-1',
                   name: '王洁怡',
-                  post: '上海大学大四在读（北大保研）',
+                  post: '上海大学本科生、昇思MindSpore优秀开发者',
                 },
               ],
               detail: '',
@@ -318,7 +318,7 @@ export default {
             {
               id: 'otherid1-1-9',
               time: '15:05-15:20',
-              desc: '我与昇思共成长——开发者颁奖',
+              desc: '开发者颁奖',
               person: [
                 {
                   id: 'otherid1-1-9-1',
@@ -331,7 +331,7 @@ export default {
             {
               id: 'otherid1-1-10',
               time: '15:20-15:30',
-              desc: '昇思展望-现场互动（趣味问答）',
+              desc: '现场互动（趣味问答）',
               person: [
                 {
                   id: 'otherid1-1-10-1',
@@ -373,7 +373,7 @@ export default {
               person: [
                 {
                   id: 'other1id1-1-2-1',
-                  name: '杨武',
+                  name: '杨　武',
                   post: '东南大学 副研究员',
                 },
               ],
@@ -386,7 +386,7 @@ export default {
               person: [
                 {
                   id: 'other1id1-1-3-1',
-                  name: '张淼',
+                  name: '张　淼',
                   post: '上海飞机设计研究院C919型号副主任设计师',
                 },
               ],
@@ -399,7 +399,7 @@ export default {
               person: [
                 {
                   id: 'other1id1-1-4-1',
-                  name: '张骏',
+                  name: '张　骏',
                   post: '昌平实验室研究员、2023科技部火炬计划获得者',
                 },
               ],
@@ -412,7 +412,7 @@ export default {
               person: [
                 {
                   id: 'other1id1-1-5-1',
-                  name: '张潘',
+                  name: '张　潘',
                   post: '中国科学院理论物理研究所研究员',
                 },
               ],
@@ -444,7 +444,7 @@ export default {
               person: [
                 {
                   id: 'other1id2-1-1-1',
-                  name: '苏腾',
+                  name: '苏　腾',
                   post: '昇思MindSpore技术专家',
                 },
               ],
@@ -541,7 +541,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-2-1',
-                  name: '侯彪',
+                  name: '侯　彪',
                   post: '西安电子科技大学人工智能学院院长',
                 },
               ],
@@ -554,7 +554,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-3-1',
-                  name: '张凯',
+                  name: '张　凯',
                   post: '华东师范大学计算机科学与技术学院副院长、华东师范大学上海智能教育研究院副院长',
                 },
               ],
@@ -567,7 +567,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-4-1',
-                  name: '钟将',
+                  name: '钟　将',
                   post: '重庆大学计算机学院副院长',
                 },
               ],
@@ -580,7 +580,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-5-1',
-                  name: '魏星',
+                  name: '魏　星',
                   post: '西安交通大学软件学院副教授',
                 },
               ],
@@ -593,7 +593,7 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-6-1',
-                  name: '赖铖',
+                  name: '赖　铖',
                   post: '鹏城实验室网络智能部算法工程师',
                 },
               ],
