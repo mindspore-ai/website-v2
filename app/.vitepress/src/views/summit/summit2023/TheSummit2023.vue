@@ -44,10 +44,10 @@ watch(
 <template>
   <SummitBanner :banner-data="summitData.banner" />
   <AppContext>
-    <div class="detail"  data-aos="fade-up">
+    <div class="detail">
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
-    <div class="statistics"  data-aos="fade-up">
+    <div class="statistics">
       <div
         v-for="item in summitData.statistics"
         :key="item.name"
