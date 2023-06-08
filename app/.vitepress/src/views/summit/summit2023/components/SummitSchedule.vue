@@ -381,7 +381,7 @@ const otherTabType = ref(0);
     //   border-top: 1px solid var(--o-color-border2);
     // }
     @media screen and (max-width: 1328px) {
-      grid-template-columns: 192px 450px 400px;
+      grid-template-columns: 192px 470px 400px;
     }
     @media screen and (max-width: 1100px) {
       grid-template-columns: 80px auto;
