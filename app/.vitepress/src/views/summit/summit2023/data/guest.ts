@@ -1,41 +1,41 @@
-import baochong from '../img/guest/baochong.png';
+// import baochong from '../img/guest/baochong.png';
 import dingcheng from '../img/guest/dingcheng.png';
-import dujunping from '../img/guest/dujunping.png';
-import gaoyiqin from '../img/guest/gaoyiqin.png';
-import heluwei from '../img/guest/heluwei.png';
-import hezhongjiang from '../img/guest/hezhongjiang.png';
+// import dujunping from '../img/guest/dujunping.png';
+// import gaoyiqin from '../img/guest/gaoyiqin.png';
+// import heluwei from '../img/guest/heluwei.png';
+// import hezhongjiang from '../img/guest/hezhongjiang.png';
 import houbiao from '../img/guest/houbiao.png';
 import huxiaoman from '../img/guest/huxiaoman.png';
 import jiangxin from '../img/guest/jiangxin.png';
 import jinyaohui from '../img/guest/jinyaohui.png';
 import laicheng from '../img/guest/laicheng.png';
-import lijinlong from '../img/guest/lijinlong.png';
-import linyonghua from '../img/guest/linyonghua.png';
-import liuchengyan from '../img/guest/liuchengyan.png';
-import luweibing from '../img/guest/luweibing.png';
-import lüyufeng from '../img/guest/lüyufeng.png';
+// import lijinlong from '../img/guest/lijinlong.png';
+// import linyonghua from '../img/guest/linyonghua.png';
+// import liuchengyan from '../img/guest/liuchengyan.png';
+// import luweibing from '../img/guest/luweibing.png';
+// import lüyufeng from '../img/guest/lüyufeng.png';
 import renxiaozhe from '../img/guest/renxiaozhe.png';
 import shaoyunfeng from '../img/guest/shaoyunfeng.png';
 import songhaitao from '../img/guest/songhaitao.png';
 import suteng from '../img/guest/suteng.png';
-import wangfeng from '../img/guest/wangfeng.png';
-import wanghuaimin from '../img/guest/wanghuaimin.png';
+// import wangfeng from '../img/guest/wangfeng.png';
+// import wanghuaimin from '../img/guest/wanghuaimin.png';
 import wangjieyi from '../img/guest/wangjieyi.png';
 import wangjinqiao from '../img/guest/wangjinqiao.png';
-import wangzhenbang from '../img/guest/wangzhenbang.png';
+// import wangzhenbang from '../img/guest/wangzhenbang.png';
 import wangzidong from '../img/guest/wangzidong.png';
 import weixing from '../img/guest/weixing.png';
 import xulingjie from '../img/guest/xulingjie.png';
-import yangxin from '../img/guest/yangxin.png';
+// import yangxin from '../img/guest/yangxin.png';
 import yangyi from '../img/guest/yangyi.png';
 import yufan from '../img/guest/yufan.png';
 import yuyue from '../img/guest/yuyue.png';
 import zhangdonghui from '../img/guest/zhangdonghui .png';
 import zhangpan from '../img/guest/zhangpan.png';
 import zhangyehong from '../img/guest/zhangyehong.png';
-import zhengqinkai from '../img/guest/zhengqinkai.png';
+// import zhengqinkai from '../img/guest/zhengqinkai.png';
 import zhongjiang from '../img/guest/zhongjiang.png';
-import zhouaimin from '../img/guest/zhouaimin.png';
+import zhangkai from '../img/guest/zhangkai.png';
 
 import chenlei from '../img/guest/chenlei.png';
 import chenmingming from '../img/guest/chenmingming.png';
@@ -46,6 +46,10 @@ import sunxian from '../img/guest/sunxian.png';
 import tianyonghong from '../img/guest/tianyonghong.png';
 import xieyuchen from '../img/guest/xieyuchen.png';
 import xubo from '../img/guest/xubo.png';
+
+import liangjunwen from '../img/guest/liangjunwen.png';
+import liaojunwei from '../img/guest/liaojunwei.png';
+import luzhiwu from '../img/guest/luzhiwu.png';
 
 export default [
   {
@@ -86,7 +90,7 @@ export default [
   {
     img: jiangxin,
     name: '蒋欣',
-    position: ['昇思MindSpore首席科学家'],
+    position: ['华为诺亚方舟实验室', '语音语义实验室主任'],
   },
   {
     img: jinxuefeng,
@@ -101,12 +105,27 @@ export default [
   {
     img: laicheng,
     name: '赖铖',
-    position: ['鹏城实验室网络智能部高级工程师'],
+    position: ['鹏城实验室网络智能部算法工程师'],
   },
   {
     img: liruifeng,
     name: '李锐锋',
     position: ['昇思MindSpore开发代表'],
+  },
+  {
+    img: liangjunwen,
+    name: '梁俊文',
+    position: ['云从科技泰山信创产品线总裁'],
+  },
+  {
+    img: liaojunwei,
+    name: '缪钧玮',
+    position: ['面壁智能副总裁'],
+  },
+  {
+    img: luzhiwu,
+    name: '卢志武',
+    position: ['中国人民大学高瓴人工智能学院教授'],
   },
   {
     img: renxiaozhe,
@@ -147,7 +166,7 @@ export default [
   {
     img: wangjieyi,
     name: '王洁怡',
-    position: ['上海大学本科生', '昇思社区优秀开发者'],
+    position: ['上海大学本科生', '昇思MindSpore优秀开发者'],
   },
   {
     img: wangjinqiao,
@@ -177,7 +196,7 @@ export default [
   {
     img: xulingjie,
     name: '徐凌杰 ',
-    position: ['壁仞科技', '联合创始人、总裁'],
+    position: ['壁仞科技联合创始人总裁'],
   },
   {
     img: xulingjie,
@@ -210,18 +229,13 @@ export default [
     position: ['鹏城实验室网络智能研究部', '助理研究员'],
   },
   {
-    img: zhengqinkai,
-    name: '郑勤锴',
-    position: ['清华大学KEG知识工程实验室', '研究助理'],
-  },
-  {
     img: zhongjiang,
     name: '钟将',
     position: ['重庆大学计算机学院副院长'],
   },
   {
-    img: zhouaimin,
-    name: '周爱民',
+    img: zhangkai,
+    name: '张凯',
     position: [
       '华东师范大学计算机科学与技术学院副院长',
       '华东师范大学上海智能教育研究院副院长',

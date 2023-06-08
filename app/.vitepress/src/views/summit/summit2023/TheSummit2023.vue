@@ -44,10 +44,10 @@ watch(
 <template>
   <SummitBanner :banner-data="summitData.banner" />
   <AppContext>
-    <div class="detail">
+    <div class="detail"  data-aos="fade-up">
       <p v-for="item in summitData.detail" :key="item">{{ item }}</p>
     </div>
-    <div class="statistics">
+    <div class="statistics"  data-aos="fade-up">
       <div
         v-for="item in summitData.statistics"
         :key="item.name"
@@ -73,7 +73,7 @@ watch(
         </OContainer>
       </div>
     </div> -->
-    <div class="agenda" :class="{ 'min-height': showIndex === 1 }">
+    <div class="agenda"  data-aos="fade-up" :class="{ 'min-height': showIndex === 1 }">
       <h3>会议日程</h3>
       <div class="date">
         <div
@@ -105,7 +105,7 @@ watch(
       </div>
     </div>
     <!-- <SummitGuests shape="circle" :web-columns-num="4" :mobile-columns-num="2" /> -->
-    <div class="guests">
+    <div class="guests"  data-aos="fade-up">
       <h3 class="title-bar">演讲嘉宾</h3>
       <SummitGuests
         :lecturer-list="summitData.guest"
@@ -114,7 +114,7 @@ watch(
         :mobile-columns-num="2"
       />
     </div>
-    <div class="interaction">
+    <div class="interaction"  data-aos="fade-up">
       <h3>{{ summitData.interaction.title }}</h3>
       <div class="interaction-list">
         <OCard
@@ -133,7 +133,9 @@ watch(
         </OCard>
       </div>
     </div>
-    <!-- <SummitPartner /> -->
+    <!-- <div class="partner"  data-aos="fade-up">
+      <SummitPartner :partner-data="summitData.partner" :row="3"/>
+    </div> -->
   </AppContext>
 </template>
 <style scoped lang="scss">
@@ -144,6 +146,23 @@ watch(
   color: var(--o-color-text1);
   font-weight: 500;
   margin: 0 0 40px;
+  &::after {
+    display: block;
+    content: '';
+    margin: 0 auto;
+    width: 72px;
+    height: 11px;
+    border-radius: 6px;
+    background-color: rgba(13, 141, 255, 0.3);
+    position: relative;
+    top: -12px;
+    @media (max-width: 767px) {
+      width: 32px;
+      height: 6px;
+      border-radius: 3px;
+      top: -6px;
+    }
+  }
   @media (max-width: 767px) {
     font-size: var(--o-font-size-h8);
     line-height: var(--o-line-height-h8);
@@ -411,6 +430,18 @@ watch(
         }
       }
     }
+  }
+}
+.partner{
+  background-image: url('./img/partner-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px;
+  overflow: visible;
+  box-shadow:var(--o-shadow-l2);
+  @include floor-box;
+  :deep(h2){
+    @include floor-title;
   }
 }
 </style>
