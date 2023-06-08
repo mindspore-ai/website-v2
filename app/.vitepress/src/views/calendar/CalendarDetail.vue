@@ -10,7 +10,6 @@ import IconTime from '~icons/appbak/time.svg';
 import IconLink from '~icons/appbak/link.svg';
 import MapMarker from '@/assets/category/calendar/position.svg';
 
-
 import { getBetweenDateStr } from '@/shared/utils';
 
 import { activityDetail } from '@/api/api-calendar';
@@ -87,7 +86,7 @@ function initMap(lng: number, lat: number) {
     version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
   })
     .then((AMap) => {
-      let marker = new AMap.Marker({
+      const marker = new AMap.Marker({
         position: new AMap.LngLat(lng, lat),
         icon: MapMarker,
         size: new AMap.Size(30, 35),
@@ -113,10 +112,10 @@ function TabClick(e: any) {
 }
 function getQueryVariable(variable: string) {
   console.log(router.route);
-  let query = window.location.search.substring(1);
-  let vars = query.split('&');
+  const query = window.location.search.substring(1);
+  const vars = query.split('&');
   for (let i = 0; i < vars.length; i++) {
-    let pair = vars[i].split('=');
+    const pair = vars[i].split('=');
     if (pair[0] == variable) {
       return pair[1];
     }

@@ -1,5 +1,7 @@
 import path from 'path';
 import { defineConfig } from 'vitepress';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+
 
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
@@ -15,6 +17,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    vueJsx({}),
     Icons({
       compiler: 'vue3',
       customCollections: {

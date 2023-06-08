@@ -148,7 +148,7 @@ const go = (path: string) => {
 
 <template>
   <div class="item-box">
-    <div class="item" v-for="(item, index) in TASK.TASK_ITEM" :key="index">
+    <div v-for="(item, index) in TASK.TASK_ITEM" :key="index" class="item">
       <p class="item-name">
         {{ item.NAME }}
       </p>
@@ -157,7 +157,7 @@ const go = (path: string) => {
         <OButton type="primary" @click="go(item.TASK)">{{
           TASK.INTERNSHIP_TASK
         }}</OButton>
-        <OButton type="text" @click="go(item.GITEE)" placement="right">
+        <OButton type="text" placement="right" @click="go(item.GITEE)">
           {{ TASK.SIG_DETAIL }}
           <template #right>
             <OIcon><IconArrowRight /></OIcon>

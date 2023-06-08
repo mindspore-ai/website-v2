@@ -113,10 +113,10 @@ const STEP = {
     <div class="step-nav">
       <!-- :style="`background:url(${item.IMG}) no-repeat;`" -->
       <div
-        class="step-bar"
-        :class="{ stepActive: index == stepActive }"
         v-for="(item, index) in STEP.STEPNAV"
         :key="item.IMG"
+        class="step-bar"
+        :class="{ stepActive: index == stepActive }"
         @click="stepChange(index)"
       >
         <img :src="item.IMG" alt="" />
@@ -124,7 +124,7 @@ const STEP = {
       </div>
     </div>
     <div class="step-body">
-      <div class="step-text" v-show="stepActive === 0">
+      <div v-show="stepActive === 0" class="step-text">
         <img class="number" src="/img/internship/step_1.png" alt="" />
         <h4>{{ STEP.STEP_ONE.TITLE }}</h4>
         <div class="main-text">
@@ -155,7 +155,7 @@ const STEP = {
           </div>
         </div>
       </div>
-      <div class="step-text" v-show="stepActive === 1">
+      <div v-show="stepActive === 1" class="step-text">
         <img class="number" src="/img/internship/step_2.png" alt="" />
         <h4>{{ STEP.STEP_TOW.TITLE }}</h4>
         <div class="main-text">
@@ -195,7 +195,7 @@ const STEP = {
           </div>
         </div>
       </div>
-      <div class="step-text" v-show="stepActive === 2">
+      <div v-show="stepActive === 2" class="step-text">
         <img class="number" src="/img/internship/step_3.png" alt="" />
         <h4>{{ STEP.STEP_ThREE.TITLE }}</h4>
         <div class="main-text">
@@ -230,7 +230,7 @@ const STEP = {
           </div>
         </div>
       </div>
-      <div class="step-text" v-show="stepActive === 3">
+      <div v-show="stepActive === 3" class="step-text">
         <img class="number" src="/img/internship/step_4.png" alt="" />
         <div class="main-text">
           <h4>{{ STEP.STEP_FOUR.TITLE }}</h4>

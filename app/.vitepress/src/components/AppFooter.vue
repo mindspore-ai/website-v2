@@ -94,12 +94,12 @@ const footer = {
           <img :src="footer.logo" alt="" />
         </div>
         <div class="footer-menu">
-          <div class="item" v-for="(item, index) in footer.menu" :key="index">
+          <div v-for="(item, index) in footer.menu" :key="index" class="item">
             <p class="title">{{ item.title }}</p>
             <div
-              class="footer_link"
               v-for="(clild, indx) in item.children"
               :key="indx"
+              class="footer_link"
             >
               <a :href="clild.link" target="_blank">{{ clild.lable }}</a>
             </div>
@@ -109,9 +109,9 @@ const footer = {
           <p class="text">{{ footer.about.text }}</p>
           <div class="aboutus-tile">
             <div
-              class="code-box"
               v-for="(item, index) in footer.about.codeImg"
               :key="index"
+              class="code-box"
             >
               <a href="javasript:;" target="_blank">
                 <img :src="item.icon" class="img" alt="" />
@@ -149,9 +149,9 @@ const footer = {
       </div>
       <div class="site-info-right">
         <a
-          :href="item.path"
           v-for="item in footer.statement"
           :key="item.path"
+          :href="item.path"
           >{{ item.lable }}</a
         >
       </div>

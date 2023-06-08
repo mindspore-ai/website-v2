@@ -3,11 +3,11 @@ import { ref, onMounted } from 'vue';
 import { getRank } from '@/api';
 
 interface RankType {
-  userId: Number;
-  integralValue: Number;
-  GiteeId: String;
-  giteeRoom?: String;
-  rank?: String;
+  userId: number;
+  integralValue: number;
+  GiteeId: string;
+  giteeRoom?: string;
+  rank?: string;
 }
 
 const showAll = ref(false);
@@ -39,7 +39,7 @@ async function getTokenQuery() {
         isRank.value = false;
       } else {
         isRank.value = true;
-        let info = res.UserPoints;
+        const info = res.UserPoints;
         info.length > 10 ? (showAll.value = true) : '';
         info.sort((a: any, b: any) => {
           return b.integralValue - a.integralValue;
@@ -82,14 +82,14 @@ onMounted(() => {
 
 <template>
   <div class="rank-border">
-    <div class="rank-content" ref="rankContent">
-      <div class="rank-box" v-if="isRank">
+    <div ref="rankContent" class="rank-content">
+      <div v-if="isRank" class="rank-box">
         <div class="rank-top">
           <div
-            class="top-item"
-            :class="`rank` + index"
             v-for="(item, index) in rankTop"
             :key="index"
+            class="top-item"
+            :class="`rank` + index"
           >
             <a class="gitee-name" target="_blank" :href="item.giteeRoom">
               {{ item.GiteeId }}
@@ -114,9 +114,9 @@ onMounted(() => {
         </div>
         <div class="rank-last">
           <div
-            class="rank-item"
             v-for="(item, index) in renderData"
             :key="index"
+            class="rank-item"
           >
             <div class="rank-left">
               <div class="rank-class">{{ item.rank }}</div>
@@ -130,14 +130,14 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="view-all" v-if="showAll">
-          <a @click="extend()" v-if="!isExent">
+        <div v-if="showAll" class="view-all">
+          <a v-if="!isExent" @click="extend()">
             {{ RANK.VIEW_ALL }}
             <div>
               <img src="/img/internship/right.svg" alt="" />
             </div>
           </a>
-          <a @click="extend()" v-else>
+          <a v-else @click="extend()">
             {{ RANK.PACK_UP }}
             <div>
               <img class="arrow" src="/img/internship/right.svg" alt="" />
@@ -145,7 +145,7 @@ onMounted(() => {
           </a>
         </div>
       </div>
-      <div class="rank404" v-else>
+      <div v-else class="rank404">
         <div>虚位以待</div>
       </div>
     </div>

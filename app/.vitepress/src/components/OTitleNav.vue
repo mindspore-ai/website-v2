@@ -30,14 +30,14 @@ const gotop = () => {
 <template>
   <div class="title-nav" :class="{ internship: internship }">
     <div class="box-line" :class="{ 'internship-line': internship }">
-      <img class="gotop" @click="gotop" src="/img/internship/top.png" />
+      <img class="gotop" src="/img/internship/top.png" @click="gotop" />
     </div>
     <div class="nav-text" :class="{ 'internship-nav': internship }">
       <ul>
         <li
           v-for="(item, index) in dataList"
-          :class="+index === currentIndex ? 'active' : ''"
           :key="index"
+          :class="+index === currentIndex ? 'active' : ''"
         >
           <a :href="item.key">
             <div class="name">{{ item.name }}</div>
@@ -47,16 +47,16 @@ const gotop = () => {
       </ul>
     </div>
     <div class="qq-code">
-      <div class="item" v-show="show && internship">
+      <div v-show="show && internship" class="item">
         <img
           class="close"
-          @click="close()"
           src="/img/internship/x.png"
           alt=""
+          @click="close()"
         />
         <img class="code" src="/img/internship/qrCode2.png" alt="" />
       </div>
-      <div class="item" v-show="show && internship">
+      <div v-show="show && internship" class="item">
         <img class="code" src="/img/internship/qrCode3.png" alt="" />
       </div>
     </div>

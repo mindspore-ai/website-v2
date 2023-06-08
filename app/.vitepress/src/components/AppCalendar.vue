@@ -29,14 +29,14 @@ interface tableData {
   date: string;
 }
 
-let isMeeting = ref(false);
-let currentDay = ref('');
+const isMeeting = ref(false);
+const currentDay = ref('');
 let tableData = reactive<any>([]);
 let currentMeet = reactive<any>({});
-let renderData = ref<any>({});
-let activeName = ref('');
-let monthDate = ref('');
-let activeIndex = ref(0);
+const renderData = ref<any>({});
+const activeName = ref('');
+const monthDate = ref('');
+const activeIndex = ref(0);
 const isCollapse = ref(false);
 
 const detailItem = [
@@ -140,7 +140,7 @@ function changeMonth(index: number) {
 }
 
 function watchChange(element: HTMLElement) {
-  let observe = new MutationObserver(function () {
+  const observe = new MutationObserver(function () {
     monthDate.value = element.innerHTML;
   });
   observe.observe(element, { childList: true });
@@ -181,7 +181,7 @@ onMounted(() => {
       }, []);
       (document.querySelector('.is-today .day-box') as HTMLElement).click();
       nextTick(() => {
-        let activeBoxs = document.querySelectorAll('.be-active')[
+        const activeBoxs = document.querySelectorAll('.be-active')[
           document.querySelectorAll('.be-active').length - 1
         ] as HTMLElement;
         if (activeBoxs) {
@@ -226,7 +226,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-    <div class="main-body" ref="activeBoxs">
+    <div ref="activeBoxs" class="main-body">
       <el-calendar class="calender">
         <template #date-cell="{ data }">
           <div
