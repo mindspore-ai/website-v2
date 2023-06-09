@@ -361,7 +361,7 @@ export default {
                 {
                   id: 'other1id1-1-1-1',
                   name: '王紫东',
-                  post: 'AI4SCI LAB副主任',
+                  post: 'AI4Sci LAB副主任',
                 },
               ],
               detail: '',
