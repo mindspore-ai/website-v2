@@ -22,7 +22,7 @@ const footer = {
         { link: 'https://www.mindspore.cn/news', lable: '资讯' },
         { link: 'https://www.mindspore.cn/security', lable: '安全' },
         {
-          link: 'https://bbs.huaweicloud.com/forum/forum-1076-1.html',
+          link: 'https://www.hiascend.com/forum/forum-0106101385921175002-1.html',
           lable: '论坛',
         },
       ],
@@ -34,6 +34,10 @@ const footer = {
         {
           link: 'https://www.huaweicloud.com/product/modelarts.html',
           lable: 'ModelArts',
+        },
+        {
+          link: 'https://xihe.mindspore.cn/',
+          lable: '昇思大模型平台',
         },
       ],
     },
