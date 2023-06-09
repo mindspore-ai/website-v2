@@ -13,6 +13,7 @@ import live from './live';
 import agenda from './agenda';
 import guest from './guest';
 import partner from './partner';
+import ceremony from './ceremony';
 
 export default {
   banner: {
@@ -20,15 +21,18 @@ export default {
     img_mo: bannerSummitMo,
     slogan: '一起昇思  无尽创新',
     title: '人工智能框架生态峰会2023',
-    subtitle: '6月16日 上海闵行大零号湾科创大厦（主论坛）闵行星河湾酒店（专题论坛）',
+    subtitle:
+      '6月16日 上海闵行大零号湾科创大厦（主论坛）闵行星河湾酒店（专题论坛）',
     btn: '立即报名',
     btnLink: 'https://e-campaign.huawei.com/m/yMrEzu',
   },
   detail: [
-    '为加快构建人工智能开源生态建设，发展AI根技术，树立国产AI框架可用好用的信心，昇思MindSpore开源社区拟于6月16日在上海举办“人工智能框架生态峰会2023”。大会围绕“新方向、新版本、新应用、新模式”主题展开，并将汇聚国内外AI领域领军学者、开源社区领袖、商业精英以及技术大咖等各方，共同分享AI技术发展趋势与产业机遇。',
+    '人工智能框架生态峰会将于2023年6月16日在上海召开，峰会由上海临港经济发展（集团）有限公司、上海人工智能研究院、昇思MindSpore开源社区联合举办，大会汇聚国内外AI领域领军院士、开源社区领袖、商业精英以及技术大咖等各方，共同探讨AI技术发展趋势与产业机遇。',
+    ,
+    '诚邀您莅临现场，共襄盛会！',
   ],
   statistics: [
-    { img: awardsImg, number: '4大', name: '奖项颁发' },
+    { img: awardsImg, number: '6大', name: '奖项颁发' },
     { img: topicImg, number: '40+', name: '主题分享' },
     { img: parterImg, number: '300+', name: '参会单位' },
     { img: guestImg, number: '500+', name: '与会嘉宾' },
@@ -36,6 +40,7 @@ export default {
   live,
   agenda,
   guest,
+  ceremony,
   interaction: {
     title: '互动亮点',
     more: '了解更多',
@@ -44,7 +49,7 @@ export default {
         title: '大模型体验',
         img: interactiveImg_1,
         detail:
-          '基于昇思MindSpore的悟空画画，紫东.太初，CodeGeeX等多款大模型现场交互式体验，一起感受大模型的发展。',
+          '基于昇思MindSpore的紫东.太初，CodeGeeX等多款大模型现场交互式体验，一起感受大模型的发展。',
         moreLink: 'https://xihe.mindspore.cn/',
       },
       {

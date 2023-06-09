@@ -58,7 +58,7 @@ export default {
             {
               id: 'id1-1-22',
               time: '10:00-10:05',
-              desc: '昇思MindSpore社区理事会成立',
+              desc: '昇思MindSpore开源社区理事会成立仪式',
               person: [
                 {
                   id: 'id1-1-22-1',
@@ -71,7 +71,7 @@ export default {
             {
               id: 'id1-1-23',
               time: '10:05-10:10',
-              desc: '昇思MindSpore技术委员会专家聘请仪式',
+              desc: '昇思MindSpore开源社区技术委员会专家聘请仪式',
               person: [
                 {
                   id: 'id1-1-23-1',
@@ -232,7 +232,7 @@ export default {
                 {
                   id: 'otherid1-1-2-1',
                   name: '余　跃',
-                  post: 'Openl启智开源平台运营中心主任',
+                  post: 'OpenI启智开源平台运营中心主任、AITISA联盟算力网推进组长',
                 },
               ],
               detail: '',
@@ -240,7 +240,7 @@ export default {
             {
               id: 'otherid1-1-3',
               time: '13:50-14:00',
-              desc: '基于大数据与人工智能的智能运维',
+              desc: '开源开放的大语言模型生态',
               person: [
                 {
                   id: 'otherid1-1-3-1',
@@ -283,8 +283,8 @@ export default {
               person: [
                 {
                   id: 'otherid1-1-6-1',
-                  name: '何　欣',
-                  post: '南京奥看信息科技有限公司CTO',
+                  name: '谢彦良',
+                  post: '南京奥看信息科技有限公司解决方案部长',
                 },
               ],
               detail: '',
@@ -387,7 +387,7 @@ export default {
                 {
                   id: 'other1id1-1-3-1',
                   name: '张　淼',
-                  post: '上海飞机设计研究院C919型号副主任设计师',
+                  post: '中国商飞上海飞机设计研究院院级专家',
                 },
               ],
               detail: '',
@@ -445,7 +445,7 @@ export default {
                 {
                   id: 'other1id2-1-1-1',
                   name: '苏　腾',
-                  post: '昇思MindSpore技术专家',
+                  post: '昇思MindSpore架构师',
                 },
               ],
               detail: '',
@@ -477,21 +477,8 @@ export default {
               detail: '',
             },
             {
-              id: 'other1id2-1-4',
-              time: '15:10-15:30',
-              desc: '华为诺亚盘古Σ万亿参数基础语言模型',
-              person: [
-                {
-                  id: 'other1id2-1-4-1',
-                  name: '任晓哲',
-                  post: '华为诺亚方舟实验室研究员',
-                },
-              ],
-              detail: '',
-            },
-            {
               id: 'other1id2-1-5',
-              time: '15:30-15:50',
+              time: '15:10-15:30',
               desc: '多模态通用生成模型及落地应用',
               person: [
                 {
@@ -504,7 +491,7 @@ export default {
             },
             {
               id: 'other1id2-1-6',
-              time: '15:50-16:10',
+              time: '15:30-15:50',
               desc: 'CPM-让大模型飞入千家万户',
               person: [
                 {
@@ -529,7 +516,7 @@ export default {
                 {
                   id: 'other1id3-1-1-1',
                   name: '李锐锋',
-                  post: '昇思MindSpore开发代表',
+                  post: '昇思MindSpore研发与生态总监',
                 },
               ],
               detail: '',
@@ -542,7 +529,7 @@ export default {
                 {
                   id: 'other1id3-1-2-1',
                   name: '侯　彪',
-                  post: '西安电子科技大学人工智能学院院长',
+                  post: '西安电子科技大学人工智能学院执行院长、华山学者特聘教授',
                 },
               ],
               detail: '',

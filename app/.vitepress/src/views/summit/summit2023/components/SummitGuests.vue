@@ -49,31 +49,34 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="lecturer-list" :style="(summitStyle as any)">
-    <div
-      v-for="item in lecturerList"
-      :key="item.NAME"
-      data-aos="fade-up"
-      class="lecturer-list-item"
-    >
+  <div class="lecturer" v-for="item in lecturerList" :key="item.title">
+    <h4 v-if="item.title">{{ item.title }}</h4>
+    <div class="lecturer-list" :style="(summitStyle as any)">
       <div
-        :class="
-          summitStyle['--shape'] === 'square'
-            ? 'lecturer-list-item-square'
-            : 'lecturer-list-item-circle'
-        "
+        v-for="(itemList, index) in item.content"
+        :key="itemList.name + index"
+        data-aos="fade-up"
+        class="lecturer-list-item"
       >
-        <img :src="item.img" />
-        <!-- <p v-else>暂无</p> -->
+        <div
+          :class="
+            summitStyle['--shape'] === 'square'
+              ? 'lecturer-list-item-square'
+              : 'lecturer-list-item-circle'
+          "
+        >
+          <img :src="itemList.img" />
+          <!-- <p v-else>暂无</p> -->
+        </div>
+        <p class="name">{{ itemList.name }}</p>
+        <p
+          v-for="titleItem in itemList.position"
+          :key="titleItem"
+          class="lecturer-list-item-title"
+        >
+          {{ titleItem }}
+        </p>
       </div>
-      <p class="name">{{ item.name }}</p>
-      <p
-        v-for="titleItem in item.position"
-        :key="titleItem"
-        class="lecturer-list-item-title"
-      >
-        {{ titleItem }}
-      </p>
     </div>
   </div>
 </template>
@@ -82,7 +85,19 @@ onMounted(() => {
 .dark img {
   filter: brightness(0.8) grayscale(0.2) contrast(1.2);
 }
-.lecturer-list {
+.lecturer{
+  h4{
+    font-size: var(--o-font-size-h6);
+    line-height: var(--o-line-height-h6);
+    font-weight: 400;
+    color: var(--o-color-text1);
+    text-align: center;
+    @media (max-width: 780px) {
+      font-size: var(--o-font-size-text);
+    line-height: var(--o-line-height-text);
+  }
+  }
+  .lecturer-list {
   margin: var(--o-spacing-h2) auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(82px, 1fr));
@@ -156,4 +171,6 @@ onMounted(() => {
     }
   }
 }
+}
+
 </style>

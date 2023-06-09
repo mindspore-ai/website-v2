@@ -28,8 +28,6 @@ watch(
   tabType,
   () => {
     const data = summitData.agenda;
-    console.log(data);
-
     if (tabType.value === 1 && data) {
       agendaData2.value = data.content.slice(1);
     } else if (data) {
@@ -114,6 +112,15 @@ watch(
         :mobile-columns-num="2"
       />
     </div>
+    <div class="councils"  data-aos="fade-up">
+      <h3 class="title-bar">仪式嘉宾</h3>
+      <SummitGuests
+        :lecturer-list="summitData.ceremony"
+        shape="circle"
+        :web-columns-num="4"
+        :mobile-columns-num="2"
+      />
+    </div>
     <div class="interaction"  data-aos="fade-up">
       <h3>{{ summitData.interaction.title }}</h3>
       <div class="interaction-list">
@@ -185,9 +192,6 @@ watch(
       font-size: var(--o-font-size-text);
       line-height: var(--o-line-height-text);
     }
-    & + p {
-      margin-top: var(--o-spacing-h6);
-    }
   }
 }
 .statistics {
@@ -245,7 +249,7 @@ watch(
     background-color: transparent;
   }
 }
-.agenda {
+.agenda,.councils {
   @include floor-box;
   h3 {
     @include floor-title;
