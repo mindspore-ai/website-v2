@@ -154,7 +154,7 @@ export default {
                 {
                   id: 'id1-1-5-1',
                   name: '于　璠',
-                  post: '昇思MindSpore首席科学家',
+                  post: '昇思MindSpore技术总经理、华为AI4Sci LAB主任',
                 },
               ],
               detail: '',
@@ -180,8 +180,8 @@ export default {
               person: [
                 {
                   id: '',
-                  name: '',
-                  post: '',
+                  name: '宋海涛',
+                  post: '上海人工智能研究院执行院长、上海交通大学人工智能研究院副院长',
                 },
               ],
               detail: '',
@@ -361,7 +361,7 @@ export default {
                 {
                   id: 'other1id1-1-1-1',
                   name: '王紫东',
-                  post: 'AI4Sci LAB副主任',
+                  post: '华为AI4Sci LAB副主任',
                 },
               ],
               detail: '',
@@ -426,7 +426,7 @@ export default {
                 {
                   id: 'other1id1-1-6-1',
                   name: '邵云峰',
-                  post: '诺亚人工智能技术专家',
+                  post: '华为诺亚方舟实验室人工智能技术专家',
                 },
               ],
               detail: '',

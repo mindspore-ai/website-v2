@@ -32,6 +32,8 @@ import wangchao from '../img/guest/wangchao.png';
 import zhangmiao from '../img/guest/zhangmiao.png';
 import zhangjun from '../img/guest/zhangjun.png';
 import yangwu from '../img/guest/yangwu.png';
+import xueyufei from '../img/guest/xueyufei.png';
+import xieyanliang from '../img/guest/xieyanliang.png';
 
 
 export default [
@@ -71,7 +73,7 @@ export default [
       {
         img: yufan,
         name: '于璠 ',
-        position: ['昇思MindSpore首席科学家'],
+        position: ['昇思MindSpore技术总经理','华为AI4Sci LAB主任'],
       },
     ],
   },
@@ -99,6 +101,11 @@ export default [
         position: ['深圳湾实验室副研究员'],
       },
       {
+        img: xieyanliang,
+        name: '谢彦良',
+        position: ['南京奥看信息科技有限公司解决方案部长'],
+      },
+      {
         img: wangchao,
         name: '王超',
         position: ['杭州旷维炬锐科技有限公司创始人'],
@@ -114,19 +121,24 @@ export default [
     title: '大模型专题论坛嘉宾',
     content: [
       {
+        img: xueyufei,
+        name: '薛宇飞',
+        position: ['智谱AI大模型事业部副总裁'],
+      },
+      {
         img: luzhiwu,
         name: '卢志武',
         position: ['中国人民大学高瓴人工智能学院教授'],
       },
       {
-        img: liaojunwei,
-        name: '缪钧玮',
-        position: ['面壁智能副总裁'],
-      },
-      {
         img: zhangyehong,
         name: '张叶红',
         position: ['鹏城实验室网络智能研究部', '助理研究员'],
+      },
+      {
+        img: liaojunwei,
+        name: '缪钧玮',
+        position: ['面壁智能副总裁'],
       },
       {
         img: suteng,
@@ -162,13 +174,13 @@ export default [
         img: wangzidong,
         name: '王紫东',
         position: [
-          ' AI4Sci LAB副主任',
+          '华为AI4Sci LAB副主任',
         ],
       },
       {
         img: shaoyunfeng,
         name: '邵云峰',
-        position: ['诺亚人工智能技术专家'],
+        position: ['华为诺亚方舟实验室人工智能技术专家'],
       },
     ],
   },

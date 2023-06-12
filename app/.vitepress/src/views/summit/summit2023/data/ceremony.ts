@@ -108,7 +108,7 @@ export default [
       {
         img: yufan,
         name: '于璠 ',
-        position: ['昇思MindSpore首席科学家'],
+        position: ['昇思MindSpore技术总经理','华为AI4Sci LAB主任'],
       },
       {
         img: suteng,
