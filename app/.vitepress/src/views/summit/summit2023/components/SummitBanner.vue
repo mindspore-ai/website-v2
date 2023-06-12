@@ -26,10 +26,22 @@ const screenWidth = useWindowResize();
       <div class="mo-top">
         <h2>{{ bannerData.slogan }}</h2>
         <h3>{{ bannerData.title }}</h3>
+        <div v-if="bannerData.btn" class="apply apply-mo">
+          <a :href="bannerData.btnLink" target="_blank">
+            <OButton :size="'mini'" type="outline" animation
+              >{{ bannerData.btn }}
+              <template #suffixIcon
+                ><OIcon><IconRight /></OIcon></template
+            ></OButton>
+          </a>
+        </div>
       </div>
       <div class="mo-botton">
         <h4>{{ bannerData.subtitle }}</h4>
-        <div v-if="bannerData.btn" class="apply">
+        <div
+          v-if="bannerData.btn"
+          class="apply apply-pc"
+        >
           <a :href="bannerData.btnLink" target="_blank">
             <OButton
               :size="screenWidth > 767 ? 'nomral' : 'mini'"
@@ -152,7 +164,7 @@ const screenWidth = useWindowResize();
     max-width: 1504px;
     @media (max-width: 767px) {
       height: 100%;
-      padding: 25px;
+      padding: 24px;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -190,10 +202,25 @@ const screenWidth = useWindowResize();
         margin-top: 6px;
         font-size: var(--o-font-size-tip);
         line-height: var(--o-line-height-tip);
+        padding: 0 36px;
       }
     }
     .apply {
       margin-top: var(--o-spacing-h5);
+      @media (max-width: 767px) {
+        margin-top: var(--o-spacing-h4);
+      }
+      &.apply-pc {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+      &.apply-mo {
+        display: none;
+        @media (max-width: 767px) {
+          display: block;
+        }
+      }
       a {
         display: inline-block;
         .o-button {
