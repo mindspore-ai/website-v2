@@ -7,11 +7,11 @@ import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuests from './components/SummitGuests.vue';
 // import SummitPartner from './components/SummitPartner.vue';
-// import SummitLive from './components/SummitLive.vue';
+import SummitLive from './components/SummitLive.vue';
 
 import summitData from './data';
 
-// const isliveShow = ref(0);
+const isliveShow = ref(0);
 
 onMounted(() => {
   AOS.init({
@@ -56,7 +56,7 @@ watch(
         <p class="name">{{ item.name }}</p>
       </div>
     </div>
-    <!-- <div class="live">
+    <div class="live">
       <h3 class="titleBar">{{ summitData.live.title }}</h3>
       <div>
         <OContainer :level-index="1">
@@ -70,8 +70,12 @@ watch(
           </ClientOnly>
         </OContainer>
       </div>
-    </div> -->
-    <div class="agenda"  data-aos="fade-up" :class="{ 'min-height': showIndex === 1 }">
+    </div>
+    <div
+      class="agenda"
+      data-aos="fade-up"
+      :class="{ 'min-height': showIndex === 1 }"
+    >
       <h3>会议日程</h3>
       <div class="date">
         <div
@@ -103,7 +107,7 @@ watch(
       </div>
     </div>
     <!-- <SummitGuests shape="circle" :web-columns-num="4" :mobile-columns-num="2" /> -->
-    <div class="guests"  data-aos="fade-up">
+    <div class="guests" data-aos="fade-up">
       <h3 class="title-bar">演讲嘉宾</h3>
       <SummitGuests
         :lecturer-list="summitData.guest"
@@ -112,7 +116,7 @@ watch(
         :mobile-columns-num="2"
       />
     </div>
-    <div class="councils"  data-aos="fade-up">
+    <div class="councils" data-aos="fade-up">
       <h3 class="title-bar">仪式嘉宾</h3>
       <SummitGuests
         :lecturer-list="summitData.ceremony"
@@ -121,7 +125,7 @@ watch(
         :mobile-columns-num="2"
       />
     </div>
-    <div class="interaction"  data-aos="fade-up">
+    <div class="interaction" data-aos="fade-up">
       <h3>{{ summitData.interaction.title }}</h3>
       <div class="interaction-list">
         <OCard
@@ -247,9 +251,11 @@ watch(
   }
   :deep(.o-container-level1) {
     background-color: transparent;
+    box-shadow: none;
   }
 }
-.agenda,.councils {
+.agenda,
+.councils {
   @include floor-box;
   h3 {
     @include floor-title;
@@ -436,15 +442,15 @@ watch(
     }
   }
 }
-.partner{
+.partner {
   background-image: url('./img/partner-bg.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 40px;
   overflow: visible;
-  box-shadow:var(--o-shadow-l2);
+  box-shadow: var(--o-shadow-l2);
   @include floor-box;
-  :deep(h2){
+  :deep(h2) {
     @include floor-title;
   }
 }
