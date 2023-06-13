@@ -400,7 +400,7 @@ export default {
             {
               id: 'other1id1-1-4',
               time: '15:30-15:50',
-              desc: '基于MindSpore SPONGE的人工智能分子模型',
+              desc: '站在Science与AI交汇的路口: 共创AI源生的科学生态圈',
               person: [
                 {
                   id: 'other1id1-1-4-1',
@@ -546,8 +546,8 @@ export default {
               person: [
                 {
                   id: 'other1id3-1-3-1',
-                  name: '张　凯',
-                  post: '华东师范大学计算机科学与技术学院副院长\n华东师范大学上海智能教育研究院副院长',
+                  name: '陈　蕾',
+                  post: '华东师范大学计算机科学与技术学院副院长',
                 },
               ],
               detail: '',

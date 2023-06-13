@@ -30,6 +30,9 @@ import xielei from '../img/guest/xielei.png';
 import yanyonghong from '../img/guest/yanyonghong.png';
 import jiangli from '../img/guest/jiangli.png';
 
+import wangzhijun from '../img/guest/wangzhijun.png';
+import xierui from '../img/guest/xierui.png';
+
 export default [
   {
     title: '昇思MindSpore开源社区理事会成立仪式嘉宾',
@@ -42,7 +45,7 @@ export default [
       {
         img: huxiaoman,
         name: '胡晓曼',
-        position: ['昇思MindSpore开源生态总监'],
+        position: ['昇思MindSpore开源社区秘书长'],
       },
       {
         img: huangxiangjun,
@@ -73,6 +76,11 @@ export default [
         ],
       },
       {
+        img: wangzhijun,
+        name: '王志军 ',
+        position: ['中国联通软件研究院副院长'],
+      },
+      {
         img: wangbin,
         name: '王斌 ',
         position: ['达闼机器人有限公司产品副总裁'],
@@ -84,6 +92,11 @@ export default [
           '中国科学院⾃动化研究所',
           '紫东太初⼤模型研究中⼼常务副主任',
         ],
+      },
+      {
+        img: xierui,
+        name: '谢睿 ',
+        position: ['软通动力集团副总裁','信创与集成事业本部总经理'],
       },
       {
         img: xulingjie,

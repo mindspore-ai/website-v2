@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import IconRight from '~icons/app/icon-arrow-right.svg';
 import useWindowResize from '@/components/hooks/useWindowResize';
 
@@ -38,10 +37,7 @@ const screenWidth = useWindowResize();
       </div>
       <div class="mo-botton">
         <h4>{{ bannerData.subtitle }}</h4>
-        <div
-          v-if="bannerData.btn"
-          class="apply apply-pc"
-        >
+        <div v-if="bannerData.btn" class="apply apply-pc">
           <a :href="bannerData.btnLink" target="_blank">
             <OButton
               :size="screenWidth > 767 ? 'nomral' : 'mini'"

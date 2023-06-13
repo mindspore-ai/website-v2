@@ -35,6 +35,10 @@ import yangwu from '../img/guest/yangwu.png';
 import xueyufei from '../img/guest/xueyufei.png';
 import xieyanliang from '../img/guest/xieyanliang.png';
 
+import chenleinv from '../img/guest/chenleinv.png';
+import liyongle from '../img/guest/liyongle.png';
+import jinxuefeng from '../img/guest/jinxuefeng.png';
+
 
 export default [
   {
@@ -80,6 +84,16 @@ export default [
   {
     title: 'MindSpore TechDay嘉宾',
     content: [
+      {
+        img: jinxuefeng,
+        name: '⾦雪锋',
+        position: ['昇思MindSpore总架构师'],
+      },
+      {
+        img: liyongle,
+        name: '李永乐',
+        position: ['LF AI & DATA 基金会理事'],
+      },
       {
         img: yuyue,
         name: '余跃',
@@ -193,11 +207,10 @@ export default [
         position: ['西安电子科技大学人工智能学院执行院长','华山学者特聘教授'],
       },
       {
-        img: zhangkai,
-        name: '张凯',
+        img: chenleinv,
+        name: '陈蕾',
         position: [
           '华东师范大学计算机科学与技术学院副院长',
-          '华东师范大学上海智能教育研究院副院长',
         ],
       },
       {
