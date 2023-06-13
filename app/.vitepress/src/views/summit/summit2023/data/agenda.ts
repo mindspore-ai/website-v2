@@ -128,7 +128,7 @@ export default {
                 {
                   id: 'id1-1-41-2',
                   name: '徐凌杰',
-                  post: '壁仞联合创始人、总裁',
+                  post: '壁仞科技联合创始人、总裁',
                 },
               ],
               detail: '',
@@ -154,7 +154,7 @@ export default {
                 {
                   id: 'id1-1-5-1',
                   name: '于　璠',
-                  post: '昇思MindSpore技术总经理、华为AI4Sci LAB主任',
+                  post: '昇思MindSpore技术总经理\n华为AI4Sci LAB主任',
                 },
               ],
               detail: '',
@@ -181,7 +181,7 @@ export default {
                 {
                   id: '',
                   name: '宋海涛',
-                  post: '上海人工智能研究院执行院长、上海交通大学人工智能研究院副院长',
+                  post: '上海人工智能研究院执行院长\n上海交通大学人工智能研究院副院长',
                 },
               ],
               detail: '',
@@ -213,13 +213,18 @@ export default {
           content: [
             {
               id: 'otherid1-1-1',
-              time: '13:35-13:40',
-              desc: '开源开放促AI技术繁荣发展',
+              time: '13:30-13:40',
+              desc: '开场致辞',
               person: [
                 {
                   id: 'otherid1-1-1-1',
+                  name: '金雪峰',
+                  post: '昇思MindSpore总架构师',
+                },
+                {
+                  id: 'otherid1-1-1-2',
                   name: '李永乐',
-                  post: '',
+                  post: 'LF AI & DATA 基金会理事',
                 },
               ],
               detail: '',
@@ -232,7 +237,7 @@ export default {
                 {
                   id: 'otherid1-1-2-1',
                   name: '余　跃',
-                  post: 'OpenI启智开源平台运营中心主任、AITISA联盟算力网推进组长',
+                  post: 'OpenI启智开源平台运营中心主任\nAITISA联盟算力网推进组长',
                 },
               ],
               detail: '',
@@ -245,7 +250,7 @@ export default {
                 {
                   id: 'otherid1-1-3-1',
                   name: '金耀辉',
-                  post: '上海交通大学人工智能研究院总工程师、上海白玉兰开源开放研究院执行院长',
+                  post: '上海交通大学人工智能研究院总工程师\n上海白玉兰开源开放研究院执行院长',
                 },
               ],
               detail: '',
@@ -310,7 +315,7 @@ export default {
                 {
                   id: 'otherid1-1-8-1',
                   name: '王洁怡',
-                  post: '上海大学本科生、昇思MindSpore优秀开发者',
+                  post: '上海大学本科生\n昇思MindSpore优秀开发者',
                 },
               ],
               detail: '',
@@ -400,7 +405,7 @@ export default {
                 {
                   id: 'other1id1-1-4-1',
                   name: '张　骏',
-                  post: '昌平实验室研究员、2023科技部火炬计划获得者',
+                  post: '昌平实验室研究员、德国洪堡学者',
                 },
               ],
               detail: '',
@@ -529,7 +534,7 @@ export default {
                 {
                   id: 'other1id3-1-2-1',
                   name: '侯　彪',
-                  post: '西安电子科技大学人工智能学院执行院长、华山学者特聘教授',
+                  post: '西安电子科技大学人工智能学院执行院长\n华山学者特聘教授',
                 },
               ],
               detail: '',
@@ -542,7 +547,7 @@ export default {
                 {
                   id: 'other1id3-1-3-1',
                   name: '张　凯',
-                  post: '华东师范大学计算机科学与技术学院副院长、华东师范大学上海智能教育研究院副院长',
+                  post: '华东师范大学计算机科学与技术学院副院长\n华东师范大学上海智能教育研究院副院长',
                 },
               ],
               detail: '',

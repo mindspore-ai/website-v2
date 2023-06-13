@@ -158,7 +158,7 @@ export default [
       {
         img: zhangjun,
         name: '张骏',
-        position: ['昌平实验室研究员', '2023科技部火炬计划获得者'],
+        position: ['昌平实验室研究员', '德国洪堡学者'],
       },
       {
         img: zhangpan,
