@@ -8,7 +8,6 @@ import tianyonghong from '../img/guest/tianyonghong.png';
 import huangxiangjun from '../img/guest/huangxiangjun.png';
 import wangbin from '../img/guest/wangbin.png';
 import suliqiang from '../img/guest/suliqiang.png';
-import liuming from '../img/guest/liuming.png';
 import jinxuefeng from '../img/guest/jinxuefeng.png';
 import suteng from '../img/guest/suteng.png';
 import yangyi from '../img/guest/yangyi.png';
@@ -33,6 +32,11 @@ import jiangli from '../img/guest/jiangli.png';
 import wangzhijun from '../img/guest/wangzhijun.png';
 import xierui from '../img/guest/xierui.png';
 
+import panqinghua from '../img/guest/panqinghua.png';
+import peizhilin from '../img/guest/peizhilin.png';
+import zhoumingwei from '../img/guest/zhoumingwei.png';
+import liangjunwen from '../img/guest/liangjunwen.png';
+
 export default [
   {
     title: '昇思MindSpore开源社区理事会成立仪式嘉宾',
@@ -53,9 +57,24 @@ export default [
         position: ['沐曦研发副总裁'],
       },
       {
-        img: liuming,
-        name: '刘明',
-        position: ['大华股份高级副总裁'],
+        img: liangjunwen,
+        name: '梁俊文',
+        position: ['云从科技','泰山信创产品线总裁'],
+      },
+      {
+        img: panqinghua,
+        name: '潘青华 ',
+        position: ['科大讯飞副总裁','工程院院长'],
+      },
+      {
+        img: peizhilin,
+        name: '裴芝林 ',
+        position: ['浦江国家实验室青年PI'],
+      },
+      {
+        img: zhoumingwei,
+        name: '周明伟 ',
+        position: ['浙江大华大数据研究院院长'],
       },
       {
         img: songhaitao,
