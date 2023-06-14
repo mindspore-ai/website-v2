@@ -12,7 +12,6 @@ import SummitLive from './components/SummitLive.vue';
 import summitData from './data';
 
 const isliveShow = ref(0);
-
 onMounted(() => {
   AOS.init({
     offset: 50,
@@ -56,7 +55,7 @@ watch(
         <p class="name">{{ item.name }}</p>
       </div>
     </div>
-    <div class="live">
+    <div class="live" id="live-box">
       <h3 class="titleBar">{{ summitData.live.title }}</h3>
       <div>
         <OContainer :level-index="1">

@@ -18,8 +18,6 @@ import zhangdonghui from '../img/guest/zhangdonghui .png';
 import zhangpan from '../img/guest/zhangpan.png';
 import zhangyehong from '../img/guest/zhangyehong.png';
 import zhongjiang from '../img/guest/zhongjiang.png';
-import zhangkai from '../img/guest/zhangkai.png';
-
 import liruifeng from '../img/guest/liruifeng.png';
 import xubo from '../img/guest/xubo.png';
 
@@ -38,6 +36,7 @@ import xieyanliang from '../img/guest/xieyanliang.png';
 import chenleinv from '../img/guest/chenleinv.png';
 import liyongle from '../img/guest/liyongle.png';
 import jinxuefeng from '../img/guest/jinxuefeng.png';
+import zhoupeng from '../img/guest/zhoupeng.png';
 
 
 export default [
@@ -47,7 +46,7 @@ export default [
       {
         img: zhangdonghui,
         name: '张东辉 ',
-        position: ['中国科学院院士'],
+        position: ['中国科学院院士','中国科学院大连化学物理研究所分子反应动力学国家重点实验室主任'],
       },
       {
         img: xubo,
@@ -153,6 +152,11 @@ export default [
         img: liaojunwei,
         name: '缪钧玮',
         position: ['面壁智能副总裁'],
+      },
+      {
+        img: zhoupeng,
+        name: '周芃',
+        position: ['广东元脑科技研究院院长','加州大学圣克鲁兹分校博士'],
       },
       {
         img: suteng,
