@@ -47,6 +47,7 @@ function setAdvertisedData() {
     sensors?.setProfile({
       ...(window as any)['sensorsCustomBuriedData'],
       profileType: 'fromAdvertised',
+      page:'summit2023',
       origin: href,
       ...paramsArr,
     });
