@@ -6,6 +6,7 @@ import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
 import SummitSchedule from './components/SummitSchedule.vue';
 import SummitGuests from './components/SummitGuests.vue';
+import { getUrlParams } from '@/shared/utils';
 // import SummitPartner from './components/SummitPartner.vue';
 import SummitLive from './components/SummitLive.vue';
 
@@ -37,6 +38,25 @@ watch(
     immediate: true,
   }
 );
+// 埋点统计
+function setAdvertisedData() {
+  const sensors = (window as any)['sensorsDataAnalytic201505'];
+  const { href } = window.location;
+  if (href.includes('?utm_source')) {
+    const paramsArr = getUrlParams(href);
+    sensors?.setProfile({
+      ...(window as any)['sensorsCustomBuriedData'],
+      profileType: 'fromAdvertised',
+      origin: href,
+      ...paramsArr,
+    });
+  }
+}
+onMounted(() => {
+  setTimeout(() => {
+    setAdvertisedData();
+  }, 300);
+});
 </script>
 <template>
   <SummitBanner :banner-data="summitData.banner" />

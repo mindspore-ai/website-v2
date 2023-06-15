@@ -31,12 +31,13 @@ import zhangmiao from '../img/guest/zhangmiao.png';
 import zhangjun from '../img/guest/zhangjun.png';
 import yangwu from '../img/guest/yangwu.png';
 import xueyufei from '../img/guest/xueyufei.png';
-import xieyanliang from '../img/guest/xieyanliang.png';
+import lilin from '../img/guest/lilin.png';
 
 import chenleinv from '../img/guest/chenleinv.png';
 import liyongle from '../img/guest/liyongle.png';
 import jinxuefeng from '../img/guest/jinxuefeng.png';
 import zhoupeng from '../img/guest/zhoupeng.png';
+import dongzhaojie from '../img/guest/dongzhaojie.png';
 
 
 export default [
@@ -62,6 +63,11 @@ export default [
         img: liangjunwen,
         name: '梁俊文',
         position: ['云从科技','泰山信创产品线总裁'],
+      },
+      {
+        img: dongzhaojie,
+        name: '董召杰',
+        position: ['南方电网人工智能科技有限公司经理'],
       },
       {
         img: songhaitao,
@@ -114,9 +120,9 @@ export default [
         position: ['深圳湾实验室副研究员'],
       },
       {
-        img: xieyanliang,
-        name: '谢彦良',
-        position: ['南京奥看信息科技有限公司解决方案部长'],
+        img: lilin,
+        name: '李林',
+        position: ['奥看科技','高级解决方案专家'],
       },
       {
         img: wangchao,

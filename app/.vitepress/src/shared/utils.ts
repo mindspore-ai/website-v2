@@ -30,23 +30,21 @@ export function getBetweenDateStr(starDay: any, endDay: any) {
 
   return dates;
 }
-// export function getHrefQuery(url) {
-//     if (url.indexOf('?') != -1) {
-//         let obj = {};
-//         let arr = url.slice(url.indexOf('?') + 1).split('&');
-//         arr.forEach(item => {
-//             let param = item.split('=');
-//             obj[param[0]] = param[1];
-//         })
-//         console.log(obj);//{type: "2", a: "3"}
-//         alert(obj.type);
-//         return obj;
-//     } else {
-//         console.log('没有参数');
-//         alert('没有参数');
-//         return null;
-//     }
-// }
+// URL参数转对象
+export function getUrlParams(url: string) {
+  const arrObj = url.split('?');
+  if (arrObj.length > 1) {
+    const arrPara = arrObj[1].split('&');
+    const list = {} as any;
+    for (let i = 0; i < arrPara.length; i++) {
+      const item = arrPara[i].split('=');
+      const key = item[0];
+      const value = item[1];
+      list[key] = value;
+    }
+    return list;
+  }
+}
 
 /**
  * 是否是浏览器环境
