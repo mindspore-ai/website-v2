@@ -167,7 +167,7 @@ export default {
                 {
                   id: 'id1-1-402-3',
                   name: '董召杰',
-                  post: '南方电网人工智能科技有限公司 高级经理\n平台技术事业部负责人',
+                  post: '南方电网人工智能科技有限公司经理',
                 },
               ],
               detail: '',
@@ -300,8 +300,8 @@ export default {
               person: [
                 {
                   id: 'otherid1-1-6-1',
-                  name: '谢彦良',
-                  post: '南京奥看信息科技有限公司解决方案部长',
+                  name: '李林',
+                  post: '奥看科技 高级解决方案专家',
                 },
               ],
               detail: '',
