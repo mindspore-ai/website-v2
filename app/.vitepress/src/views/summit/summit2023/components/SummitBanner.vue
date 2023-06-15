@@ -26,7 +26,7 @@ const screenWidth = useWindowResize();
         <h2>{{ bannerData.slogan }}</h2>
         <h3>{{ bannerData.title }}</h3>
         <div v-if="bannerData.btn" class="apply apply-mo">
-          <a :href="bannerData.btnLink" target="_blank">
+          <a :href="bannerData.btnLink">
             <OButton :size="'mini'" type="outline" animation
               >{{ bannerData.btn }}
               <template #suffixIcon
@@ -38,7 +38,7 @@ const screenWidth = useWindowResize();
       <div class="mo-botton">
         <h4>{{ bannerData.subtitle }}</h4>
         <div v-if="bannerData.btn" class="apply apply-pc">
-          <a :href="bannerData.btnLink" target="_blank">
+          <a :href="bannerData.btnLink">
             <OButton
               :size="screenWidth > 767 ? 'nomral' : 'mini'"
               type="outline"
