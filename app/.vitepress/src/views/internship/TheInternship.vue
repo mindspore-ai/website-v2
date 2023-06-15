@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+import { getUrlParams } from '@/shared/utils';
+
 import InternshipBanner from './InternshipBanner.vue';
 import InternshipStep from './InternshipStep.vue';
 import InternshipTask from './InternshipTask.vue';
@@ -12,6 +14,7 @@ import TaskTitle from '/img/internship/task-title.png';
 import IntegralTitle from '/img/internship/integral-title.png';
 import PartnerTitle from '/img/internship/partner-title.png';
 import HelpTitle from '/img/internship/help-title.png';
+
 
 const INTEGRAL_DATA = [
   {
@@ -196,6 +199,26 @@ onMounted(() => {
 });
 onUnmounted(() => {
   window.removeEventListener('scroll', scroTop);
+});
+// 埋点统计
+function setAdvertisedData() {
+  const sensors = (window as any)['sensorsDataAnalytic201505'];
+  const { href } = window.location;
+  if (href.includes('?utm_source')) {
+    const paramsArr = getUrlParams(href);
+    sensors?.setProfile({
+      ...(window as any)['sensorsCustomBuriedData'],
+      profileType: 'fromAdvertised',
+      page:'Internship',
+      origin: href,
+      ...paramsArr,
+    });
+  }
+}
+onMounted(() => {
+  setTimeout(() => {
+    setAdvertisedData();
+  }, 300);
 });
 </script>
 

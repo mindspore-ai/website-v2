@@ -37,6 +37,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-calendar/, ''),
       },
+      '/api-rank/': {
+        target: 'https://api.openeuler.org/osi-task-manager/',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-rank/, ''),
+      },
     },
   },
 });

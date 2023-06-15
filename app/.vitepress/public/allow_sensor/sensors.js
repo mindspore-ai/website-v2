@@ -483,8 +483,8 @@ var sensors = window['sensorsDataAnalytic201505'];
 function initSensor() {
   window['sensorsCustomBuriedData'] = {
     language: location.pathname.split('/')[1] || 'en',
-    ip: (window['returnCitySN'] && window['returnCitySN'].query) || '',
-    city: (window['returnCitySN'] && window['returnCitySN'].city) || '',
+    ip: (window['returnCitySN'] && window['returnCitySN'].query) || '暂无',
+    city: (window['returnCitySN'] && window['returnCitySN'].city) || '暂无',
     os: info.OS,
     osVersion: info.OSVersion,
     browser: info.browserInfo.browser,
