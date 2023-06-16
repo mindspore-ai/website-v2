@@ -1,5 +1,5 @@
 ---
-title: 昇思MindSpore全球生态峰会2023
+title: 人工智能框架生态峰会2023
 ---
 
 <script setup lang="ts">
