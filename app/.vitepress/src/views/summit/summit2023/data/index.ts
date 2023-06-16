@@ -23,7 +23,7 @@ export default {
     title: '人工智能框架生态峰会2023',
     subtitle:
       '6月16日 上海闵行大零号湾科创大厦（主论坛）闵行星河湾酒店（专题论坛）',
-    btn: '观看直播',
+    btn: '查看回放',
     btnLink: '#live-box',
   },
   detail: [
