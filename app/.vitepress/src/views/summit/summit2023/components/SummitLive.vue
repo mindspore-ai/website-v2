@@ -27,7 +27,7 @@ const screenWidth = useWindowResize();
 const isTest = ref(false);
 const liveUrl = ref('');
 const renderData: Array<RenderData> = props.liveData as any;
-const roomId = ref(0);
+const roomId = ref(1);
 const setLiveRoom = (item: RenderData, index: number): void => {
   roomId.value = index;
   createUserId(isTest.value ? item.liveTestId : item.liveId);
@@ -55,11 +55,12 @@ const height = ref(800);
 function setHeight(data: any) {
   // data.state=0,直播未开始，1正在直播，2直播结束，3回放中
   // 注意pc端对面会传一个高度过来可以直接用，但是移动端不会传，所以要根据直播状态自己写
+  // 在直播未开始和直播结束时因为只显示视频，所以将嵌入高度需根据视频嵌入比例调整，正在直播和回放因为涉及到评论区根据显示效果自行调整
   if (screenWidth.value <= 1100) {
     if (data.state === 1 || data.state === 3) {
       height.value = screenWidth.value * 1.31;
     } else if (data.state === 0 || data.state === 2) {
-      height.value = screenWidth.value * 0.5;
+      height.value = ((screenWidth.value - 32) * 9) / 16;
     }
   } else {
     height.value = data.height ? parseInt(data.height) : 800;
@@ -86,7 +87,7 @@ onMounted(async () => {
   isTest.value =
     window.location.host.includes('test.osinfra') ||
     window.location.host.includes('localhost');
-  createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
+  createUserId(isTest.value ? renderData[1].liveTestId : renderData[1].liveId);
   messageEvent();
 });
 
