@@ -94,7 +94,7 @@ onMounted(async () => {
 // 背景
 const ActiveBg = `url(${liveActiveBg})`;
 
-const liveRoom = ref(renderData[0].name);
+const liveRoom = ref(renderData[1].name);
 const changeLive = (val: number): void => {
   createUserId(val);
 };
