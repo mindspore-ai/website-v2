@@ -27,7 +27,7 @@ const screenWidth = useWindowResize();
 const isTest = ref(false);
 const liveUrl = ref('');
 const renderData: Array<RenderData> = props.liveData as any;
-const roomId = ref(1);
+const roomId = ref(0);
 const setLiveRoom = (item: RenderData, index: number): void => {
   roomId.value = index;
   createUserId(isTest.value ? item.liveTestId : item.liveId);
@@ -87,14 +87,14 @@ onMounted(async () => {
   isTest.value =
     window.location.host.includes('test.osinfra') ||
     window.location.host.includes('localhost');
-  createUserId(isTest.value ? renderData[1].liveTestId : renderData[1].liveId);
+  createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
   messageEvent();
 });
 
 // 背景
 const ActiveBg = `url(${liveActiveBg})`;
 
-const liveRoom = ref(renderData[1].name);
+const liveRoom = ref(renderData[0].name);
 const changeLive = (val: number): void => {
   createUserId(val);
 };
@@ -103,7 +103,7 @@ const changeLive = (val: number): void => {
 <template>
   <div class="live-room">
     <div class="select-room">
-      <OSelect v-model="liveRoom" clearable filterable @change="changeLive">
+      <OSelect v-model="liveRoom" filterable @change="changeLive">
         <OOption
           v-for="item in renderData"
           :key="item.id"

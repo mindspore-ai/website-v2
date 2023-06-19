@@ -22,7 +22,7 @@ onMounted(() => {
   });
 });
 const showIndex = ref(0);
-const tabType = ref(1);
+const tabType = ref(0);
 const agendaData2 = ref();
 watch(
   tabType,
