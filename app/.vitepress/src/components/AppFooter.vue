@@ -30,7 +30,7 @@ const footer = {
     {
       title: '友情链接',
       children: [
-        { link: 'https://ascend.huawei.com/', lable: '昇腾社区' },
+        { link: 'https://www.hiascend.com/zh/', lable: '昇腾社区' },
         {
           link: 'https://www.huaweicloud.com/product/modelarts.html',
           lable: 'ModelArts',
@@ -117,7 +117,7 @@ const footer = {
               :key="index"
               class="code-box"
             >
-              <a href="javasript:;" target="_blank">
+              <a href="javasript:;">
                 <img :src="item.icon" class="img" alt="" />
                 <img :src="item.iconHover" class="img-hover" alt="" />
                 <div class="code-box-hover">
