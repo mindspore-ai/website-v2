@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-import { useRouter, useData } from 'vitepress';
+import { useRouter } from 'vitepress';
 import OButton from '@/components/OButton.vue';
 import IconArrowRight from '~icons/appbak/icon-arrow.svg';
 

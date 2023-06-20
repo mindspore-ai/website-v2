@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const goHome = () => {
-  window.open('https://www.mindspore.cn/');
+  window.open('https://mindspore.myopeninfra.com');
 };
 </script>
 <template>

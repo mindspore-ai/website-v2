@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
-const props = defineProps({
+defineProps({
   currentIndex: {
     type: Number,
-    default: '',
+    default: 0,
   },
   dataList: {
     type: Object,
-    default: [],
+    default() {
+      return [];
+    },
   },
   internship: {
     type: Boolean,
@@ -33,7 +35,7 @@ const gotop = () => {
       <img class="gotop" src="/img/internship/top.png" @click="gotop" />
     </div>
     <div class="nav-text" :class="{ 'internship-nav': internship }">
-      <ul>
+      <ul v-if="dataList.length > 0">
         <li
           v-for="(item, index) in dataList"
           :key="index"
