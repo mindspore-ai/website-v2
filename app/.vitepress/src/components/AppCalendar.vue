@@ -78,7 +78,7 @@ function changeTab(index: number) {
       });
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
@@ -117,7 +117,7 @@ function meetClick(day: string) {
       }
     });
   } catch (error) {
-    console.log();
+    console.error('error', error);
   }
 }
 

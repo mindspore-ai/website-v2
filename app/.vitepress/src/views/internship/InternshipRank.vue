@@ -7,16 +7,16 @@ interface RankType {
   integralValue: number;
   GiteeId: string;
   giteeRoom?: string;
-  rank?: string;
+  rank?: number;
 }
 
 const showAll = ref(false);
 const isExent = ref(false);
 const isRank = ref(true);
 
-const rankInfo = ref<RankType | {}>();
-const rankTop = ref<RankType | {}>();
-const renderData = ref<RankType | {}>();
+const rankInfo = ref<RankType | []>();
+const rankTop = ref<RankType | []>();
+const renderData = ref<RankType | []>();
 
 const RANK = {
   FIRST: '第一名',
@@ -45,10 +45,10 @@ async function getTokenQuery() {
           return b.integralValue - a.integralValue;
         });
 
-        info.forEach((item: RankType, index: number | string) => {
+        info.forEach((item: RankType, index: number) => {
           item['giteeRoom'] = `https://gitee.com/${item.GiteeId}`;
           index < 9
-            ? (item['rank'] = `0${+index + 1}`)
+            ? (item['rank'] = Number(`0${+index + 1}`))
             : (item['rank'] = +index + 1);
         });
 
@@ -66,6 +66,7 @@ async function getTokenQuery() {
 }
 
 const extend = () => {
+  console.log('rankInfo.value :>> ', rankInfo.value);
   if (isExent.value) {
     renderData.value = rankInfo.value && rankInfo.value.slice(3, 10);
     window.location.href = '#rank';
