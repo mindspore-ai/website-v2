@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import useWindowResize from '@/components/hooks/useWindowResize';
 import liveActiveBg from '../img/live-active-bg.png';
 
 interface RenderData {
   id: number;
   liveId: number;
   liveTestId: number;
+  videoLink: string;
   name: string;
 }
 
@@ -23,80 +23,27 @@ const props = defineProps({
     default: '',
   },
 });
-const screenWidth = useWindowResize();
-const isTest = ref(false);
-const liveUrl = ref('');
+
 const renderData: Array<RenderData> = props.liveData as any;
 const roomId = ref(0);
 const setLiveRoom = (item: RenderData, index: number): void => {
   roomId.value = index;
-  createUserId(isTest.value ? item.liveTestId : item.liveId);
+  setLiveUrl(item.videoLink);
 };
-
-function createUserId(liveId: number) {
-  let digit = Math.round(Math.random() * 10);
-  digit > 3 ? digit : (digit = 3);
-
-  let returnId = '',
-    userName = '';
-  const charStr =
-    '0123456789@#$%&~ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  for (let i = 0; i < digit; i++) {
-    const index = Math.round(Math.random() * (charStr.length - 1));
-    returnId += charStr.substring(index, index + 1);
-  }
-  userName = returnId;
-  // landScape 是否启用 H5 直播间横屏适配
-  // logout=1 增加参数 logout=1 时，页面会做退出登录处理，会以游客身份观看
-  liveUrl.value = `https://vhall.huawei.com/v2/watch/${liveId}?lang=zh&thirdId=${userName}&landScape=true`;
-}
-// const state = ref(-1);
-const height = ref(800);
-function setHeight(data: any) {
-  // data.state=0,直播未开始，1正在直播，2直播结束，3回放中
-  // 注意pc端对面会传一个高度过来可以直接用，但是移动端不会传，所以要根据直播状态自己写
-  // 在直播未开始和直播结束时因为只显示视频，所以将嵌入高度需根据视频嵌入比例调整，正在直播和回放因为涉及到评论区根据显示效果自行调整
-  if (screenWidth.value <= 1100) {
-    if (data.state === 1 || data.state === 3) {
-      height.value = screenWidth.value * 1.31;
-    } else if (data.state === 0 || data.state === 2) {
-      height.value = ((screenWidth.value - 32) * 9) / 16;
-    }
-  } else {
-    height.value = data.height ? parseInt(data.height) : 800;
-  }
-}
-function messageEvent() {
-  window.addEventListener(
-    'message',
-    function (event) {
-      let data = {
-        state: '',
-      };
-      try {
-        data = JSON.parse(event.data);
-      } catch (e) {
-        data = event.data;
-      }
-      setHeight(data);
-    },
-    false
-  );
+const liveUrl = ref('');
+function setLiveUrl(link: string) {
+  liveUrl.value = link;
 }
 onMounted(async () => {
-  isTest.value =
-    window.location.host.includes('test.osinfra') ||
-    window.location.host.includes('localhost');
-  createUserId(isTest.value ? renderData[0].liveTestId : renderData[0].liveId);
-  messageEvent();
+  setLiveUrl(renderData[0].videoLink);
 });
 
 // 背景
 const ActiveBg = `url(${liveActiveBg})`;
 
 const liveRoom = ref(renderData[0].name);
-const changeLive = (val: number): void => {
-  createUserId(val);
+const changeLive = (val: string): void => {
+  setLiveUrl(val);
 };
 </script>
 
@@ -108,11 +55,11 @@ const changeLive = (val: number): void => {
           v-for="item in renderData"
           :key="item.id"
           :label="item.name"
-          :value="isTest ? item.liveTestId : item.liveId"
+          :value="item.videoLink"
         />
       </OSelect>
     </div>
-    <iframe
+    <!-- <iframe
       ref="livePage"
       :height="height"
       allow="camera *;microphone *;"
@@ -123,7 +70,8 @@ const changeLive = (val: number): void => {
       webkitallowfullscreen="true"
       mozallowfullscreen="true"
       class="live-room-video"
-    ></iframe>
+    ></iframe> -->
+    <video :src="liveUrl" class="live-room-video" controls></video>
     <div class="live-room-web">
       <div class="live-room-web-itembox" :class="className">
         <div

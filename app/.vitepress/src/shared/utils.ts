@@ -1,3 +1,4 @@
+import { ElMessage } from 'element-plus';
 export function getBetweenDateStr(starDay: any, endDay: any) {
   const arr = [];
   const dates = [];
@@ -52,4 +53,13 @@ export function getUrlParams(url: string) {
  */
 export function isBrowser(): boolean {
   return typeof global === 'undefined';
+}
+
+// 错误处理
+
+export function handleError(error: any) {
+  ElMessage({
+    message: error,
+    type: 'error',
+  });
 }
