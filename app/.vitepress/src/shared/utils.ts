@@ -55,6 +55,14 @@ export function isBrowser(): boolean {
   return typeof global === 'undefined';
 }
 
+// TS 对象key合法检查
+export function isValidKey(
+  key: string | number | symbol,
+  object: object
+): key is keyof typeof object {
+  return Object.prototype.hasOwnProperty.call(object, key);
+}
+
 // 错误处理
 
 export function handleError(error: any) {

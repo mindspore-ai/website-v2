@@ -258,7 +258,7 @@ onMounted(() => {
     </div>
   </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
 $themeColor: #40adff;
 $backgroundColor: #e5e8f0;
 $orange: #ff844d;
@@ -381,9 +381,6 @@ $orange: #ff844d;
         }
       }
       .agenda {
-        // .cell {
-        //   padding: 0;
-        // }
         .tab-box {
           margin: 50px 0 30px;
           .el-tabs__nav-scroll {

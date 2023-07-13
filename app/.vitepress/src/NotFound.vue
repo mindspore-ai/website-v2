@@ -10,14 +10,14 @@ const goPath = (path: string) => {
 </script>
 
 <template>
-  <main class="page404">
+  <main class="page-notfound">
     <p class="text">404</p>
     <o-button type="primary" @click="goPath('/home/')"> 回到首页 </o-button>
   </main>
 </template>
 
-<style lang="scss">
-.page404 {
+<style scoped lang="scss">
+.page-notfound {
   width: 50%;
   margin: 0 auto;
   padding: 64px 0;
