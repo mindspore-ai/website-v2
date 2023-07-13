@@ -6,7 +6,6 @@ import { createPinia } from 'pinia';
 import OpenDesign from 'opendesign';
 import ElementPlus from 'element-plus';
 
-import 'aos/dist/aos.css';
 import 'element-plus/dist/index.css';
 import '@/shared/styles/base.scss';
 

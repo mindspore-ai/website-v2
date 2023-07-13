@@ -39,7 +39,6 @@ import jinxuefeng from '../img/guest/jinxuefeng.png';
 import zhoupeng from '../img/guest/zhoupeng.png';
 import dongzhaojie from '../img/guest/dongzhaojie.png';
 
-
 export default [
   {
     title: '主论坛嘉宾',
@@ -47,7 +46,10 @@ export default [
       {
         img: zhangdonghui,
         name: '张东辉 ',
-        position: ['中国科学院院士','中国科学院大连化学物理研究所分子反应动力学国家重点实验室主任'],
+        position: [
+          '中国科学院院士',
+          '中国科学院大连化学物理研究所分子反应动力学国家重点实验室主任',
+        ],
       },
       {
         img: xubo,
@@ -57,12 +59,12 @@ export default [
       {
         img: xulingjie,
         name: '徐凌杰 ',
-        position: ['壁仞科技','联合创始人、总裁'],
+        position: ['壁仞科技', '联合创始人、总裁'],
       },
       {
         img: liangjunwen,
         name: '梁俊文',
-        position: ['云从科技','泰山信创产品线总裁'],
+        position: ['云从科技', '泰山信创产品线总裁'],
       },
       {
         img: dongzhaojie,
@@ -72,7 +74,10 @@ export default [
       {
         img: songhaitao,
         name: '宋海涛 ',
-        position: ['上海人工智能研究院执行院长','上海交通大学人工智能研究院副院长'],
+        position: [
+          '上海人工智能研究院执行院长',
+          '上海交通大学人工智能研究院副院长',
+        ],
       },
       {
         img: dingcheng,
@@ -82,7 +87,7 @@ export default [
       {
         img: yufan,
         name: '于璠 ',
-        position: ['昇思MindSpore技术总经理','华为AI4Sci LAB主任'],
+        position: ['昇思MindSpore技术总经理', '华为AI4Sci LAB主任'],
       },
     ],
   },
@@ -102,12 +107,15 @@ export default [
       {
         img: yuyue,
         name: '余跃',
-        position: ['OpenI启智开源平台运营中心主任','AITISA联盟算力网推进组长'],
+        position: ['OpenI启智开源平台运营中心主任', 'AITISA联盟算力网推进组长'],
       },
       {
         img: jinyaohui,
         name: '⾦耀辉',
-        position: ['上海交通大学人工智能研究院总工程师','上海白玉兰开源开放研究院执行院长'],
+        position: [
+          '上海交通大学人工智能研究院总工程师',
+          '上海白玉兰开源开放研究院执行院长',
+        ],
       },
       {
         img: huxiaoman,
@@ -122,7 +130,7 @@ export default [
       {
         img: lilin,
         name: '李林',
-        position: ['奥看科技','高级解决方案专家'],
+        position: ['奥看科技', '高级解决方案专家'],
       },
       {
         img: wangchao,
@@ -162,7 +170,7 @@ export default [
       {
         img: zhoupeng,
         name: '周芃',
-        position: ['广东元脑科技研究院院长','加州大学圣克鲁兹分校博士'],
+        position: ['广东元脑科技研究院院长', '加州大学圣克鲁兹分校博士'],
       },
       {
         img: suteng,
@@ -197,9 +205,7 @@ export default [
       {
         img: wangzidong,
         name: '王紫东',
-        position: [
-          '华为AI4Sci LAB副主任',
-        ],
+        position: ['华为AI4Sci LAB副主任'],
       },
       {
         img: shaoyunfeng,
@@ -214,19 +220,17 @@ export default [
       {
         img: houbiao,
         name: '侯彪',
-        position: ['西安电子科技大学人工智能学院执行院长','华山学者特聘教授'],
+        position: ['西安电子科技大学人工智能学院执行院长', '华山学者特聘教授'],
       },
       {
         img: chenleinv,
         name: '陈蕾',
-        position: [
-          '华东师范大学计算机科学与技术学院副院长',
-        ],
+        position: ['华东师范大学计算机科学与技术学院副院长'],
       },
       {
         img: zhongjiang,
         name: '钟将',
-        position: ['重庆大学计算机学院副院长','教授、博士生导师'],
+        position: ['重庆大学计算机学院副院长', '教授、博士生导师'],
       },
       {
         img: weixing,

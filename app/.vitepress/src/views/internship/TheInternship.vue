@@ -15,7 +15,6 @@ import IntegralTitle from '/img/internship/integral-title.png';
 import PartnerTitle from '/img/internship/partner-title.png';
 import HelpTitle from '/img/internship/help-title.png';
 
-
 const INTEGRAL_DATA = [
   {
     HEAD: '1、实习工资、',
@@ -191,7 +190,6 @@ const scroTop = () => {
   } else {
     return false;
   }
-  // console.log('object :>> ', activeIndex.value);
 };
 
 onMounted(() => {
@@ -209,7 +207,7 @@ function setAdvertisedData() {
     sensors?.setProfile({
       ...(window as any)['sensorsCustomBuriedData'],
       profileType: 'fromAdvertised',
-      page:'Internship',
+      page: 'Internship',
       origin: href,
       ...paramsArr,
     });

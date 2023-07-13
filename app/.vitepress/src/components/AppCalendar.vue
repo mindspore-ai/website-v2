@@ -10,6 +10,7 @@ import IconDown from '~icons/appbak/down.svg';
 
 import { useRouter } from 'vitepress';
 import { getMeetingData, getActivityData } from '@/api/api-calendar';
+import { handleError } from '@/shared/utils';
 
 const router = useRouter();
 
@@ -77,8 +78,8 @@ function changeTab(index: number) {
         return item.activity_category === index - 1;
       });
     }
-  } catch (error) {
-    console.log(error);
+  } catch {
+    handleError('Error!');
   }
 }
 
@@ -111,13 +112,12 @@ function meetClick(day: string) {
             );
           });
         }
-        throw Error();
       } else {
         isMeeting.value = false;
       }
     });
-  } catch (error) {
-    console.log();
+  } catch {
+    handleError('Error!');
   }
 }
 
@@ -189,8 +189,8 @@ onMounted(() => {
         }
       });
     });
-  } catch (error) {
-    console.log(error);
+  } catch {
+    handleError('Error!');
   }
   // dom加载完成展开最近的活动
   const element = document.querySelector('.el-calendar__title') as HTMLElement;

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue';
-import AOS from 'aos';
 
 import AppContext from '@/components/AppContent.vue';
 import SummitBanner from './components/SummitBanner.vue';
@@ -13,14 +12,6 @@ import SummitLive from './components/SummitLive.vue';
 import summitData from './data';
 
 const isliveShow = ref(0);
-onMounted(() => {
-  AOS.init({
-    offset: 50,
-    duration: 800,
-    delay: 100,
-    once: true,
-  });
-});
 const showIndex = ref(0);
 const tabType = ref(0);
 const agendaData2 = ref();
@@ -47,7 +38,7 @@ function setAdvertisedData() {
     sensors?.setProfile({
       ...(window as any)['sensorsCustomBuriedData'],
       profileType: 'fromAdvertised',
-      page:'summit2023',
+      page: 'summit2023',
       origin: href,
       ...paramsArr,
     });
@@ -76,7 +67,7 @@ onMounted(() => {
         <p class="name">{{ item.name }}</p>
       </div>
     </div>
-    <div class="live" id="live-box">
+    <div id="live-box" class="live">
       <h3 class="titleBar">{{ summitData.live.title }}</h3>
       <div>
         <OContainer :level-index="1">

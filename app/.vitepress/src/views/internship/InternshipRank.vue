@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { getRank } from '@/api';
+import { handleError } from '@/shared/utils';
 
 interface RankType {
   userId: number;
@@ -14,9 +15,9 @@ const showAll = ref(false);
 const isExent = ref(false);
 const isRank = ref(true);
 
-const rankInfo = ref<RankType | {}>();
-const rankTop = ref<RankType | {}>();
-const renderData = ref<RankType | {}>();
+const rankInfo = ref<RankType>();
+const rankTop = ref<RankType>();
+const renderData = ref<RankType>();
 
 const RANK = {
   FIRST: '第一名',
@@ -60,8 +61,8 @@ async function getTokenQuery() {
       isRank.value = false;
       throw new Error(res.status + ' ' + res.message);
     }
-  } catch (error) {
-    console.error('授权获信息失败', error);
+  } catch {
+    handleError('Error!');
   }
 }
 

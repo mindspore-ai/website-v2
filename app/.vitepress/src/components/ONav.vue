@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { NavItem } from '@/shared/@types/interface';
-import { useRouter, useData } from 'vitepress';
+// import { NavItem } from '@/shared/@types/interface';
+import { useRouter } from 'vitepress';
 
-const props = defineProps({
+defineProps({
   navItems: {
     type: Object,
     default() {
@@ -12,7 +12,7 @@ const props = defineProps({
   },
 });
 
-const { lang } = useData();
+// const { lang } = useData();
 const router = useRouter();
 
 const activeItem = ref(router.route.path.split('/')[2]);
@@ -26,14 +26,14 @@ watch(
 
 const emits = defineEmits(['nav-click']);
 // 点击大导航事件
-const handleClick = (item: NavItem) => {
+const handleClick = (item: any) => {
   emits('nav-click', item);
   // if (item.path != 'code') {
   //   router.go(`/${lang.value}/${item.path}/`);
   // }
 };
 // 点击子导航事件
-const handleChildClick = (item: NavItem) => {
+const handleChildClick = () => {
   // if (item.path.includes('https')) {
   //   window.open(item.path, '_blank');
   // } else {
@@ -46,7 +46,7 @@ const handleChildClick = (item: NavItem) => {
 const isShow = ref(false);
 const navActive = ref('');
 //鼠标移入大导航事件
-const showSub = (item: NavItem) => {
+const showSub = (item: any) => {
   navActive.value = item.id;
   isShow.value = true;
 };
