@@ -1,18 +1,15 @@
-<script setup lang="ts">
-const goHome = () => {
-  window.open('https://www.mindspore.cn/');
-};
-</script>
+<script setup lang="ts"></script>
 <template>
   <div class="app-header">
     <div class="app-header-body">
       <div class="header-logo">
-        <img
-          class="header-logo-img"
-          alt="mindspore logo"
-          src="/img/logo.png"
-          @click="goHome"
-        />
+        <a href="https://mindspore.myopeninfra.com/">
+          <img
+            class="header-logo-img"
+            alt="mindspore logo"
+            src="/img/logo.png"
+          />
+        </a>
       </div>
     </div>
   </div>

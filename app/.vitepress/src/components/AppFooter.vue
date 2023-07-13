@@ -6,11 +6,11 @@ const footer = {
       title: '教程',
       children: [
         {
-          link: 'https://www.mindspore.cn/tutorials/zh-CN/master/index.html',
+          link: 'https://mindspore.myopeninfra.com/tutorials/zh-CN/master/index.html',
           lable: '使用指导手册',
         },
         {
-          link: 'https://www.mindspore.cn/tutorials/zh-CN/master/index.html',
+          link: 'https://mindspore.myopeninfra.com/tutorials/zh-CN/master/index.html',
           lable: '查看教程',
         },
       ],
@@ -19,8 +19,8 @@ const footer = {
       title: '支持',
       children: [
         { link: 'https://gitee.com/mindspore', lable: '社区' },
-        { link: 'https://www.mindspore.cn/news', lable: '资讯' },
-        { link: 'https://www.mindspore.cn/security', lable: '安全' },
+        { link: 'https://mindspore.myopeninfra.com/news', lable: '资讯' },
+        { link: 'https://mindspore.myopeninfra.com/security', lable: '安全' },
         {
           link: 'https://www.hiascend.com/forum/forum-0106101385921175002-1.html',
           lable: '论坛',
@@ -84,8 +84,11 @@ const footer = {
   },
   statement: [
     { path: 'https://status.mindspore.cn/', lable: '服务状态' },
-    { path: 'https://www.mindspore.cn/legal', lable: '法律声明' },
-    { path: 'https://www.mindspore.cn/privacy', lable: '个人信息保护政策' },
+    { path: 'https://mindspore.myopeninfra.com/legal', lable: '法律声明' },
+    {
+      path: 'https://mindspore.myopeninfra.com/privacy',
+      lable: '个人信息保护政策',
+    },
   ],
 };
 </script>
