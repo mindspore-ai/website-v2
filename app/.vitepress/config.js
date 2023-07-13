@@ -18,18 +18,6 @@ module.exports = {
         content: 'width=device-width,initial-scale=1,user-scalable=no',
       },
     ],
-    [
-      'script',
-      {
-        src: '/allow_sensor/sensorsdata.min.js',
-      },
-    ],
-    [
-      'script',
-      {
-        src: '/allow_sensor/sensors.js',
-      },
-    ],
   ],
   locales: {
     '/': {

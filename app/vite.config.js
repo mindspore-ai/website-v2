@@ -2,7 +2,6 @@ import path from 'path';
 import { defineConfig } from 'vitepress';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 
-
 import Icons from 'unplugin-icons/vite';
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 
@@ -33,7 +32,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api-calendar': {
-        target: 'https://api.mindspore.cn/meetings',
+        target: 'https://meeting.mindspore.myopeninfra.com/meetings',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api-calendar/, ''),
       },

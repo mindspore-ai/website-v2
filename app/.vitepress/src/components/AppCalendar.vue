@@ -3,10 +3,14 @@ import { ref, nextTick, onMounted, reactive } from 'vue';
 
 import OIcon from '@/components/OIcon.vue';
 
+import { isValidKey } from '@/shared/utils';
+
 import IconLeft from '~icons/appbak/icon-left.svg';
 import IconRight from '~icons/appbak/icon-right.svg';
 import IconArrowRight from '~icons/appbak/arrow-right.svg';
 import IconDown from '~icons/appbak/down.svg';
+
+import { TableData, TimeData } from '@/shared/@types/clendar';
 
 import { useRouter } from 'vitepress';
 import { getMeetingData, getActivityData } from '@/api/api-calendar';
@@ -14,27 +18,18 @@ import { handleError } from '@/shared/utils';
 
 const router = useRouter();
 
-interface tableData {
-  timeData: Array<
-    [
-      {
-        creator: string;
-        duration_time: string;
-        join_url: string;
-        startTime: string;
-        endTiem: string;
-        url: string;
-      }
-    ]
-  >;
-  date: string;
-}
-
-const isMeeting = ref(false);
 const currentDay = ref('');
-let tableData = reactive<any>([]);
-let currentMeet = reactive<any>({});
-const renderData = ref<any>({});
+let tableData = reactive<TableData[]>([]);
+let currentMeet = reactive<TableData>({
+  start_date: '',
+  date: '',
+  timeData: [],
+});
+const renderData = ref<TableData>({
+  date: '',
+  start_date: '',
+  timeData: [],
+});
 const activeName = ref('');
 const monthDate = ref('');
 const activeIndex = ref(0);
@@ -70,13 +65,17 @@ function changeTab(index: number) {
     if (index === 0) {
       renderData.value.timeData = currentMeet.timeData;
     } else if (index === 1) {
-      renderData.value.timeData = currentMeet.timeData.filter((item: any) => {
-        return item.etherpad;
-      });
+      renderData.value.timeData = currentMeet.timeData.filter(
+        (item: TimeData) => {
+          return item.etherpad;
+        }
+      );
     } else {
-      renderData.value.timeData = currentMeet.timeData.filter((item: any) => {
-        return item.activity_category === index - 1;
-      });
+      renderData.value.timeData = currentMeet.timeData.filter(
+        (item: TimeData) => {
+          return item.activity_category === index - 1;
+        }
+      );
     }
   } catch {
     handleError('Error!');
@@ -87,15 +86,14 @@ function meetClick(day: string) {
   currentDay.value = day;
   activeIndex.value = 0;
   try {
-    tableData.forEach((item: any) => {
+    for (let i = 0; i < tableData.length; i++) {
       isCollapse.value = false;
-      if (item.date === day || item.start_date === day) {
-        isMeeting.value = true;
+      if (tableData[i].date === day || tableData[i].start_date === day) {
         // 深拷贝
-        currentMeet = JSON.parse(JSON.stringify(item));
-        renderData.value = JSON.parse(JSON.stringify(item));
+        currentMeet = JSON.parse(JSON.stringify(tableData[i]));
+        renderData.value = JSON.parse(JSON.stringify(tableData[i]));
         // 只有一个会议默认展开
-        if (item.timeData.length === 1) {
+        if (tableData[i].timeData.length === 1) {
           activeName.value = '0';
           nextTick(() => {
             if (document.querySelector('.meet-item')) {
@@ -105,23 +103,25 @@ function meetClick(day: string) {
         } else {
           // 会议时间排序
           activeName.value = '';
-          item.timeData.sort((a: any, b: any) => {
+          tableData[i].timeData.sort((a: TimeData, b: TimeData) => {
             return (
               parseInt(a.startTime.replace(':', '')) -
               parseInt(b.startTime.replace(':', ''))
             );
           });
         }
+        return;
       } else {
-        isMeeting.value = false;
+        currentMeet.timeData = [];
+        renderData.value.timeData = [];
       }
-    });
+    }
   } catch {
     handleError('Error!');
   }
 }
 
-// 为日历单元格绑定会议次数 (弃用)
+// 为日历单元格绑定会议次数
 function getMeetTimes(day: string): number {
   let times = 0;
   tableData.forEach((item: any) => {
@@ -170,7 +170,7 @@ onMounted(() => {
   try {
     Promise.all([getActivityData(), getMeetingData()]).then((res) => {
       tableData = [...res[0].tableData, ...res[1].tableData];
-      tableData.reduce((prev: any, current: any) => {
+      tableData.reduce((prev: TableData[], current: TableData) => {
         const item: any = prev.find(
           (sameDate: any) => sameDate.start_date === current.date
         );
@@ -241,8 +241,6 @@ onMounted(() => {
               >
                 {{ data.day.split('-').slice(2)[0] }}
               </p>
-              <!-- <div class="holiday" v-if="data.day === '2022-04-20'">春节快乐</div>
-              <div class="holiday" v-if="data.day === '2022-05-20'">程序员节</div> -->
             </div>
           </div>
         </template>
@@ -316,7 +314,10 @@ onMounted(() => {
                   </template>
                   <div class="meet-detail">
                     <template v-for="keys in detailItem" :key="keys.key">
-                      <div v-if="item[keys.key]" class="meeting-item">
+                      <div
+                        v-if="isValidKey(keys.key, item) && item[keys.key]"
+                        class="meeting-item"
+                      >
                         <div class="item-title">{{ keys.text }}:</div>
                         <p
                           v-if="
@@ -331,7 +332,7 @@ onMounted(() => {
                           v-else-if="
                             keys.isLink &&
                             item[keys.key] &&
-                            !item[keys.key].includes('http')
+                            !(item[keys.key] as string).startsWith('http')
                           "
                         >
                           {{ item[keys.key] }}
@@ -340,6 +341,7 @@ onMounted(() => {
                           v-else-if="keys.isLink"
                           :href="item[keys.key]"
                           target="_blank"
+                          rel="noopener noreferrer"
                           >{{ item[keys.key] }}</a
                         >
                         <p v-else-if="keys.key === 'activity_type'">
