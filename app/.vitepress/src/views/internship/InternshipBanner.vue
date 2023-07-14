@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import OButton from '@/components/OButton.vue';
 
-import HomeBanner from '@/assets/home/banner.jpg';
 import IconArrowRight from '~icons/appbak/icon-arrow.svg';
 </script>
 

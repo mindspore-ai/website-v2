@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 
-const props = defineProps({
+defineProps({
   currentIndex: {
     type: Number,
-    default: '',
+    default: NaN,
   },
   dataList: {
-    type: Object,
-    default: [],
+    type: Array,
+    default() {
+      return [];
+    },
   },
   internship: {
     type: Boolean,

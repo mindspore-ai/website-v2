@@ -1,3 +1,4 @@
+import { ElMessage } from 'element-plus';
 export function getBetweenDateStr(starDay: any, endDay: any) {
   const arr = [];
   const dates = [];
@@ -52,4 +53,21 @@ export function getUrlParams(url: string) {
  */
 export function isBrowser(): boolean {
   return typeof global === 'undefined';
+}
+
+// TS 对象key合法检查
+export function isValidKey(
+  key: string | number | symbol,
+  object: object
+): key is keyof typeof object {
+  return Object.prototype.hasOwnProperty.call(object, key);
+}
+
+// 错误处理
+
+export function handleError(error: any) {
+  ElMessage({
+    message: error,
+    type: 'error',
+  });
 }

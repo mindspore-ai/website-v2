@@ -59,12 +59,12 @@ export default [
       {
         img: liangjunwen,
         name: '梁俊文',
-        position: ['云从科技','泰山信创产品线总裁'],
+        position: ['云从科技', '泰山信创产品线总裁'],
       },
       {
         img: panqinghua,
         name: '潘青华 ',
-        position: ['科大讯飞副总裁','工程院院长'],
+        position: ['科大讯飞副总裁', '工程院院长'],
       },
       {
         img: peizhilin,
@@ -79,7 +79,10 @@ export default [
       {
         img: songhaitao,
         name: '宋海涛 ',
-        position: ['上海人工智能研究院执行院长','上海交通大学人工智能研究院副院长'],
+        position: [
+          '上海人工智能研究院执行院长',
+          '上海交通大学人工智能研究院副院长',
+        ],
       },
       {
         img: suliqiang,
@@ -115,12 +118,12 @@ export default [
       {
         img: xierui,
         name: '谢睿 ',
-        position: ['软通动力集团副总裁','信创与集成事业本部总经理'],
+        position: ['软通动力集团副总裁', '信创与集成事业本部总经理'],
       },
       {
         img: xulingjie,
         name: '徐凌杰 ',
-        position: ['壁仞科技','联合创始人、总裁'],
+        position: ['壁仞科技', '联合创始人、总裁'],
       },
       {
         img: yanghua,
@@ -140,7 +143,7 @@ export default [
       {
         img: yufan,
         name: '于璠 ',
-        position: ['昇思MindSpore技术总经理','华为AI4Sci LAB主任'],
+        position: ['昇思MindSpore技术总经理', '华为AI4Sci LAB主任'],
       },
       {
         img: suteng,
@@ -221,12 +224,12 @@ export default [
       {
         img: yuyue,
         name: '余跃',
-        position: ['OpenI启智开源平台运营中心主任','AITISA联盟算力网推进组长'],
+        position: ['OpenI启智开源平台运营中心主任', 'AITISA联盟算力网推进组长'],
       },
       {
         img: linyonghua,
         name: '林咏华',
-        position: ['智源研究院总工程师','IEEE女工程师亚太区领导组成员'],
+        position: ['智源研究院总工程师', 'IEEE女工程师亚太区领导组成员'],
       },
     ],
   },

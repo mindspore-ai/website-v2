@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, shallowRef, onMounted } from 'vue';
-import { useRouter } from 'vitepress';
 
 import AMapLoader from '@amap/amap-jsapi-loader';
+import { handleError } from '@/shared/utils';
 
 import OIcon from '@/components/OIcon.vue';
 import IconRight from '~icons/appbak/arrow-right.svg';
@@ -15,8 +15,6 @@ import { getBetweenDateStr } from '@/shared/utils';
 import { activityDetail } from '@/api/api-calendar';
 
 const map: any = shallowRef(null);
-const router = useRouter();
-
 interface detailDate {
   title: string;
   register_url: string;
@@ -98,8 +96,8 @@ function initMap(lng: number, lat: number) {
       });
       map.value.add(marker);
     })
-    .catch((e) => {
-      console.log(e);
+    .catch(() => {
+      handleError('Error!');
     });
 }
 
@@ -111,12 +109,11 @@ function TabClick(e: any) {
   tabIndex.value = e.index - 0;
 }
 function getQueryVariable(variable: string) {
-  console.log(router.route);
   const query = window.location.search.substring(1);
   const vars = query.split('&');
   for (let i = 0; i < vars.length; i++) {
     const pair = vars[i].split('=');
-    if (pair[0] == variable) {
+    if (pair[0] === variable) {
       return pair[1];
     }
   }
@@ -261,7 +258,7 @@ onMounted(() => {
     </div>
   </div>
 </template>
-<style lang="scss">
+<style scoped lang="scss">
 $themeColor: #40adff;
 $backgroundColor: #e5e8f0;
 $orange: #ff844d;
@@ -363,7 +360,6 @@ $orange: #ff844d;
         }
         .el-tabs__item {
           font-size: 20px;
-          font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
           color: #555;
           line-height: 24px;
           @media screen and (max-width: 1120px) {
@@ -384,9 +380,6 @@ $orange: #ff844d;
         }
       }
       .agenda {
-        // .cell {
-        //   padding: 0;
-        // }
         .tab-box {
           margin: 50px 0 30px;
           .el-tabs__nav-scroll {
