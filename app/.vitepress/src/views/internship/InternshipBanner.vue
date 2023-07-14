@@ -16,7 +16,11 @@ import IconArrowRight from '~icons/appbak/icon-arrow.svg';
               ><OIcon><IconArrowRight /></OIcon></template
           ></OButton>
         </a>
-        <a href="https://www.openeuler.org/zh/internship/" target="_blank">
+        <a
+          href="https://www.openeuler.org/zh/internship/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <OButton size="large" placement="right">
             openEuler
             <template #right
