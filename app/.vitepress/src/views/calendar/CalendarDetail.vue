@@ -360,7 +360,6 @@ $orange: #ff844d;
         }
         .el-tabs__item {
           font-size: 20px;
-          font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
           color: #555;
           line-height: 24px;
           @media screen and (max-width: 1120px) {

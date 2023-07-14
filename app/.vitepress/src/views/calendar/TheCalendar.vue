@@ -39,7 +39,9 @@ const appProcess = {
   <div class="calendar">
     <AppBanner :option="bannerInfo" />
     <h1 class="calendar-title">MindSpore社区活动日历</h1>
-    <AppCalendar />
+    <ClientOnly>
+      <AppCalendar />
+    </ClientOnly>
     <div class="app-process">
       <h2 class="calendar-title">{{ appProcess.title }}</h2>
       <ul class="process">
