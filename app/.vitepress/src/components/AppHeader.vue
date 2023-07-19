@@ -1,9 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { WEBSITE } from '@/shared/config';
+</script>
 <template>
   <div class="app-header">
     <div class="app-header-body">
       <div class="header-logo">
-        <a href="https://mindspore.myopeninfra.com/">
+        <a :href="WEBSITE">
           <img
             class="header-logo-img"
             alt="mindspore logo"

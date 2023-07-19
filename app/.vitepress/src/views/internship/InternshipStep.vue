@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { OPENEULER_OBS, GITEE_URL } from '@/shared/config';
 const stepActive = ref(0);
 
 function stepChange(index: number) {
@@ -132,7 +133,7 @@ const STEP = {
           <p>
             {{ STEP.STEP_ONE.TEXT2 }}
             <a
-              href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue"
+              :href="`${GITEE_URL}/openeuler-competition/opensource-internship/issues/I4A68T?from=project-issue`"
               target="_blank"
               >{{ STEP.STEP_ONE.LINK1 }}</a
             >
@@ -147,7 +148,7 @@ const STEP = {
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar"
+              :href="`${OPENEULER_OBS}/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar`"
               download
               class="download"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a
@@ -187,7 +188,7 @@ const STEP = {
               {{ STEP.STEP_TOW.ATTENTION_TEXT[3] }}
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+              :href="`${OPENEULER_OBS}/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/02%20%E4%BB%BB%E5%8A%A1%E8%AE%A4%E9%A2%86%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar`"
               download
               class="download"
               >{{ STEP.STEP_TOW.DONWLOAD }}</a
@@ -251,7 +252,7 @@ const STEP = {
               {{ item }}
             </p>
             <a
-              href="https://openeuler-website-beijing.obs.cn-north-4.myhuaweicloud.com/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar"
+              :href="`${OPENEULER_OBS}/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/03%20%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E5%92%8C%E9%82%AE%E4%BB%B6%E6%A8%A1%E6%9D%BF.rar`"
               download
               class="download"
               >{{ STEP.STEP_FOUR.DONWLOAD }}</a
