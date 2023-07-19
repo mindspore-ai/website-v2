@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { getRank } from '@/api';
 import { handleError } from '@/shared/utils';
+import { GITEE_URL } from '@/shared/config';
 
 interface RankType {
   userId: number;
@@ -47,7 +48,7 @@ async function getTokenQuery() {
         });
 
         info.forEach((item: RankType, index: number | string) => {
-          item['giteeRoom'] = `https://gitee.com/${item.GiteeId}`;
+          item['giteeRoom'] = `${GITEE_URL}/${item.GiteeId}`;
           index < 9
             ? (item['rank'] = `0${+index + 1}`)
             : (item['rank'] = +index + 1);

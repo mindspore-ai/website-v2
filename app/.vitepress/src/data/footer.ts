@@ -1,3 +1,12 @@
+import {
+  BEIAN_URL,
+  MS_STATUS_URL,
+  GITEE_URL,
+  XIHE_URL,
+  HIASCEND_URL,
+  WEBSITE,
+  HWCLOUD_URL,
+} from '@/shared/config';
 export default {
   logo: '/img/foot-logo.png',
   menu: [
@@ -5,11 +14,11 @@ export default {
       title: '教程',
       children: [
         {
-          link: 'https://mindspore.myopeninfra.com/tutorials/zh-CN/master/index.html',
+          link: WEBSITE + '/tutorials/zh-CN/master/index.html',
           lable: '使用指导手册',
         },
         {
-          link: 'https://mindspore.myopeninfra.com/tutorials/zh-CN/master/index.html',
+          link: WEBSITE + '/tutorials/zh-CN/master/index.html',
           lable: '查看教程',
         },
       ],
@@ -17,11 +26,11 @@ export default {
     {
       title: '支持',
       children: [
-        { link: 'https://gitee.com/mindspore', lable: '社区' },
-        { link: 'https://mindspore.myopeninfra.com/news', lable: '资讯' },
-        { link: 'https://mindspore.myopeninfra.com/security', lable: '安全' },
+        { link: GITEE_URL + '/mindspore', lable: '社区' },
+        { link: WEBSITE + '/news', lable: '资讯' },
+        { link: WEBSITE + '/security', lable: '安全' },
         {
-          link: 'https://www.hiascend.com/forum/forum-0106101385921175002-1.html',
+          link: HIASCEND_URL + '/forum/forum-0106101385921175002-1.html',
           lable: '论坛',
         },
       ],
@@ -29,13 +38,13 @@ export default {
     {
       title: '友情链接',
       children: [
-        { link: 'https://www.hiascend.com/zh/', lable: '昇腾社区' },
+        { link: HIASCEND_URL + '/zh/', lable: '昇腾社区' },
         {
-          link: 'https://www.huaweicloud.com/product/modelarts.html',
+          link: HWCLOUD_URL + '/product/modelarts.html',
           lable: 'ModelArts',
         },
         {
-          link: 'https://xihe.mindspore.cn/',
+          link: XIHE_URL,
           lable: '昇思大模型平台',
         },
       ],
@@ -73,19 +82,19 @@ export default {
   copyright: {
     lable: '版权所有©MindSpore 2023',
     beian: '粤A2-20044005号',
-    beianPath: 'https://beian.miit.gov.cn',
+    beianPath: BEIAN_URL,
   },
   record: {
-    path: 'https://beian.miit.gov.cn',
+    path: BEIAN_URL,
     img: '/img/copyright.png',
     keepRecord: '粤公网安备',
     recordNum: '44030702002890号',
   },
   statement: [
-    { path: 'https://status.mindspore.cn/', lable: '服务状态' },
-    { path: 'https://mindspore.myopeninfra.com/legal', lable: '法律声明' },
+    { path: MS_STATUS_URL, lable: '服务状态' },
+    { path: WEBSITE + '/legal', lable: '法律声明' },
     {
-      path: 'https://mindspore.myopeninfra.com/privacy',
+      path: WEBSITE + '/privacy',
       lable: '个人信息保护政策',
     },
   ],
