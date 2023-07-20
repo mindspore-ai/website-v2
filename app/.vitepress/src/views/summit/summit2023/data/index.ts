@@ -14,6 +14,7 @@ import agenda from './agenda';
 import guest from './guest';
 import partner from './partner';
 import ceremony from './ceremony';
+import { XIHE_URL } from '@/shared/config';
 
 export default {
   banner: {
@@ -50,7 +51,7 @@ export default {
         img: interactiveImg_1,
         detail:
           '基于昇思MindSpore的紫东.太初，CodeGeeX等多款大模型现场交互式体验，一起感受大模型的发展。',
-        moreLink: 'https://xihe.mindspore.cn/',
+        moreLink: XIHE_URL,
       },
       {
         title: '大模型产业落地',

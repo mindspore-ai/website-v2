@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-
+import { GITEE_URL, ETHERPAD } from '@/shared/config';
 import { getUrlParams } from '@/shared/utils';
 
 import InternshipBanner from './InternshipBanner.vue';
@@ -304,7 +304,7 @@ onMounted(() => {
             {{ RULE.MORE[0] }}
             <a
               class="this-post"
-              href="https://gitee.com/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue"
+              :href="`${GITEE_URL}/openeuler-competition/opensource-internship/issues/I4AJIR?from=project-issue`"
               target="_blank"
               >{{ RULE.MORE[1] }}</a
             >
