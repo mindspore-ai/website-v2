@@ -63,6 +63,11 @@ const appProcess = {
     font-weight: normal;
     color: #000000;
     line-height: 48px;
+    @media screen and (max-width:768px) {
+      padding: 32px 0 12px;
+      font-size: 24px;
+      line-height: normal;
+    }
   }
   .app-process {
     max-width: 1416px;
