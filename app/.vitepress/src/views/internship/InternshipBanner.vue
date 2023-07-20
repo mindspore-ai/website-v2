@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import OButton from '@/components/OButton.vue';
-
+import { OPENEULER_URL } from '@/shared/config';
 import IconArrowRight from '~icons/appbak/icon-arrow.svg';
 </script>
 
@@ -16,7 +16,7 @@ import IconArrowRight from '~icons/appbak/icon-arrow.svg';
               ><OIcon><IconArrowRight /></OIcon></template
           ></OButton>
         </a>
-        <a href="https://www.openeuler.org/zh/internship/" target="_blank">
+        <a :href="`${OPENEULER_URL}/zh/internship/`" target="_blank">
           <OButton size="large" placement="right">
             openEuler
             <template #right
