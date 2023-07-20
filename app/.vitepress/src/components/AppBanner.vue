@@ -33,12 +33,22 @@ defineProps({
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: auto;
+    }
 
     .title {
       font-size: 54px;
       font-weight: 500;
       color: #fff;
       line-height: 76px;
+      @media screen and (max-width: 768px) {
+        margin: 0 16px;
+        text-align: center;
+        font-size: 24px;
+        line-height: normal;
+      }
     }
 
     .cover {

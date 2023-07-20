@@ -37,7 +37,6 @@ const isCollapse = ref(false);
 
 const detailItem = [
   { text: '会议详情', key: 'detail', isLink: false },
-  { text: '发起人', key: 'creator', isLink: false },
   { text: '会议日期', key: 'date', isLink: false },
   { text: '会议时间', key: 'duration_time', isLink: false },
   { text: '腾讯会议ID', key: 'meeting_id', isLink: false },
@@ -524,6 +523,9 @@ a {
           .el-collapse-item__header {
             display: block;
             border: none;
+            @media screen and (max-width:768px) {
+              height: auto;
+            }
           }
         }
         .el-collapse-item__wrap {
@@ -539,6 +541,9 @@ a {
         border-right: 1px solid #e5e8f0;
         border-bottom: 1px solid #e5e8f0;
         overflow-y: scroll;
+        @media screen  and (max-width:768px){
+          padding: 0;
+        }
         &::-webkit-scrollbar-track {
           border-radius: 4px;
           background-color: #fff;
@@ -567,6 +572,9 @@ a {
           height: 100%;
           background-color: #fff;
           border: 1px solid #e5e8f0;
+          @media screen and (max-width:768px) {
+            padding: 8px 12px;
+          }
 
           .meet-left {
             display: flex;
@@ -674,9 +682,6 @@ a {
               flex-shrink: 0;
               width: 90px;
             }
-            // .meet-title {
-            //   width: 90px;
-            // }
             .creator {
               display: flex;
               align-items: center;
