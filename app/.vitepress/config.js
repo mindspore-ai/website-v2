@@ -47,7 +47,6 @@ module.exports = {
   },
   themeConfig: {
     theme: '',
-    website: 'https://www.mindspore.cn',
   },
   dest: './dist',
 };

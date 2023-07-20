@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-// import { NavItem } from '@/shared/@types/interface';
 import { useRouter } from 'vitepress';
 
 defineProps({
@@ -12,7 +11,6 @@ defineProps({
   },
 });
 
-// const { lang } = useData();
 const router = useRouter();
 
 const activeItem = ref(router.route.path.split('/')[2]);
@@ -28,18 +26,9 @@ const emits = defineEmits(['nav-click']);
 // 点击大导航事件
 const handleClick = (item: any) => {
   emits('nav-click', item);
-  // if (item.path != 'code') {
-  //   router.go(`/${lang.value}/${item.path}/`);
-  // }
 };
 // 点击子导航事件
 const handleChildClick = () => {
-  // if (item.path.includes('https')) {
-  //   window.open(item.path, '_blank');
-  // } else {
-  //   emits('nav-click', item);
-  //   router.go(`/${lang.value}/${item.path}/`);
-  // }
   isShow.value = false;
 };
 
@@ -78,7 +67,7 @@ const hideSub = () => {
                 v-for="children in item.children"
                 :key="children.id"
                 class="sub-menu-item"
-                @click="handleChildClick(children)"
+                @click="handleChildClick()"
               >
                 {{ children.label }}
               </li>

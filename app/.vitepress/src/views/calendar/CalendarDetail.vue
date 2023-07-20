@@ -4,7 +4,6 @@ import { ref, shallowRef, onMounted } from 'vue';
 import AMapLoader from '@amap/amap-jsapi-loader';
 import { handleError } from '@/shared/utils';
 
-import OIcon from '@/components/OIcon.vue';
 import IconRight from '~icons/appbak/arrow-right.svg';
 import IconTime from '~icons/appbak/time.svg';
 import IconLink from '~icons/appbak/link.svg';
@@ -13,6 +12,7 @@ import MapMarker from '@/assets/category/calendar/position.svg';
 import { getBetweenDateStr } from '@/shared/utils';
 
 import { activityDetail } from '@/api/api-calendar';
+import { MEETING_OBS } from '@/shared/config';
 
 const map: any = shallowRef(null);
 interface detailDate {
@@ -56,9 +56,7 @@ function getActivitiesData() {
     res.activity_type === 2
       ? (tabTitle.value = tabTitle.value.splice(0, 2))
       : initMap(res.longitude, res.latitude);
-    res[
-      'posterImg'
-    ] = `https://community-meeting-minutes.obs.cn-north-4.myhuaweicloud.com:443/imgs/event-detail/${res.poster}.png`;
+    res['posterImg'] = `${MEETING_OBS}/imgs/event-detail/${res.poster}.png`;
     detailObj.value = res;
     const arr: any = [];
     betweenDate.value = getBetweenDateStr(res.start_date, res.end_date);
@@ -360,7 +358,6 @@ $orange: #ff844d;
         }
         .el-tabs__item {
           font-size: 20px;
-          font-family: FZLTCHJW--GB1-0, FZLTCHJW--GB1;
           color: #555;
           line-height: 24px;
           @media screen and (max-width: 1120px) {

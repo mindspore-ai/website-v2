@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { ETHERPAD } from '@/shared/config';
 import IconTime from '~icons/app/icon-time.svg';
 
 defineProps({
@@ -32,10 +33,7 @@ const otherTabType = ref(0);
       v-if="agendaData.lable.includes('SIG组版本规划工作会议')"
       class="go-etherpad"
     >
-      <a
-        href="https://etherpad.opengauss.org/p/ODD2023-SIG-Meeting"
-        target="_blank"
-        >点击此处</a
+      <a :href="`${ETHERPAD}/p/ODD2023-SIG-Meeting`" target="_blank">点击此处</a
       >并选择感兴趣的SIG组-Etherpad文件，按要求填写议题和参会信息
     </span>
     <div class="schedule-item other">

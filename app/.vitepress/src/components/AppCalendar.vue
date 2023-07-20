@@ -612,7 +612,6 @@ a {
               width: fit-content;
               height: 24px;
               font-size: 16px;
-              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
               line-height: 24px;
               .o-icon {
                 margin: 0 5px;
@@ -639,7 +638,6 @@ a {
               flex-direction: column;
               justify-content: space-around;
               padding: 0 24px;
-              font-family: FZLTHJW--GB1-0, FZLTHJW--GB1;
               font-weight: normal;
               text-align: center;
               font-size: 16px;
