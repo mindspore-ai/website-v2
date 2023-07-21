@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import { ref, shallowRef, onMounted } from 'vue';
 
-import AMapLoader from '@amap/amap-jsapi-loader';
-import { handleError } from '@/shared/utils';
-
 import IconRight from '~icons/appbak/arrow-right.svg';
 import IconTime from '~icons/appbak/time.svg';
 import IconLink from '~icons/appbak/link.svg';
-import MapMarker from '@/assets/category/calendar/position.svg';
 
 import { getBetweenDateStr } from '@/shared/utils';
 
 import { activityDetail } from '@/api/api-calendar';
 import { MEETING_OBS } from '@/shared/config';
 
-const map: any = shallowRef(null);
 interface detailDate {
   title: string;
   register_url: string;
@@ -55,7 +50,7 @@ function getActivitiesData() {
     //  线上活动不加载地图，不显示tab
     res.activity_type === 2
       ? (tabTitle.value = tabTitle.value.splice(0, 2))
-      : initMap(res.longitude, res.latitude);
+      : '';
     res['posterImg'] = `${MEETING_OBS}/imgs/event-detail/${res.poster}.png`;
     detailObj.value = res;
     const arr: any = [];
@@ -74,29 +69,6 @@ function getActivitiesData() {
     );
     flowPathList.value = arr;
   });
-}
-
-function initMap(lng: number, lat: number) {
-  AMapLoader.load({
-    key: 'c042a36d28964bd1e1e1785849fb335f', // 申请好的Web端开发者Key，首次调用 load 时必填
-    version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-  })
-    .then((AMap) => {
-      const marker = new AMap.Marker({
-        position: new AMap.LngLat(lng, lat),
-        icon: MapMarker,
-        size: new AMap.Size(30, 35),
-        anchor: 'bottom-center',
-      });
-      map.value = new AMap.Map('container', {
-        zoom: 16, //  初始化地图级别
-        center: [lng, lat], //  初始化地图中心点位置
-      });
-      map.value.add(marker);
-    })
-    .catch(() => {
-      handleError('Error!');
-    });
 }
 
 function dayTabClick(e: any) {
@@ -247,9 +219,6 @@ onMounted(() => {
               </div>
               <img v-if="detailObj.wx_code" :src="detailObj.wx_code" />
             </div>
-          </div>
-          <div class="map">
-            <div id="container"></div>
           </div>
         </div>
       </div>
