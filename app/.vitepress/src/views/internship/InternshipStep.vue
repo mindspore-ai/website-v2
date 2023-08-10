@@ -33,9 +33,7 @@ const STEP = {
     LINK1: '实习测试任务',
     TEXT3: '并提供PR链接。',
     TEXT4: '（3）填写报名资料表。',
-    ATTENTION1: '将以上申请材料按照模板填写后发送至开源实习官方邮箱',
-    ATTENTION2:
-      '。发送后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
+    ATTENTION1: '在申请材料模板下载里仔细阅读实习报名流程，在线表单填写完毕后等待审核，组织方将以邮件反馈审核结果，审核通过后，签订劳务协议，用所分配的账号开始实习。',
     DONWLOAD: '申请材料模板下载',
     TIP: '（注：组织方会根据所提交的资料对报名学生进行一定的审核筛选）',
   },
@@ -143,8 +141,6 @@ const STEP = {
           <div class="attention">
             <p>
               {{ STEP.STEP_ONE.ATTENTION1 }}
-              <a href="mailto:intern@openeuler.sh">intern@openeuler.sh</a>
-              {{ STEP.STEP_ONE.ATTENTION2 }}
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
