@@ -144,7 +144,7 @@ const STEP = {
               <span class="orange">{{ STEP.STEP_ONE.TIP }}</span>
             </p>
             <a
-              :href="`${OPENEULER_OBS}/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/01%20%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF.rar`"
+              :href="`${OPENEULER_OBS}/%E5%BC%80%E6%BA%90%E5%AE%9E%E4%B9%A0%E8%B5%84%E6%96%99%E4%B8%8B%E8%BD%BD/%E5%AE%9E%E4%B9%A0%E7%94%B3%E8%AF%B7%E6%9D%90%E6%96%99%E6%A8%A1%E6%9D%BF%20.rar`"
               download
               class="download"
               >{{ STEP.STEP_ONE.DONWLOAD }}</a
